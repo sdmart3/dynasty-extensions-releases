@@ -3,7 +3,9 @@
 ## 0.1.6
 New:
 - Weekly Strategy shares your weekly gameplan focus with Call Sheet 0.14.1 or later, so Call Sheet's suggestions follow it. Nothing to set up.
-- Whisperer head coach talents open extra Weekly Strategy focus slots: 3 to start, plus 1 for each Whisperer talent your head coach owns, up to 6.
+- More Weekly Strategy focus players: 3 to start, plus 1 for each position Whisperer talent your HEAD COACH owns, up to 6.
+  The Whisperers are in the Talent Developer tree in Upgrade Coach Skills: QB, RB, WR/TE, OL, DL, LB and DB Whisperer (30 points each)
+  and K/P Whisperer (15 points). They keep their normal effect too (freshmen and sophomores at that position progress faster).
   The extra players get focus XP and the weekly goal bonus like the first three.
 - The spring game crowd is now about half the stadium.
 - New patch for the AIO dynasty mod 1.4.0. The AIO 1.3.1 patch is still included: pick the one that matches your AIO version.

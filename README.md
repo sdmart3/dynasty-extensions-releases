@@ -7,8 +7,8 @@ Three dynasty add-ons in one mod:
 - **Press Box.** Play or watch any game of the week. Go to EA SPORTS Network > Scores / Schedules, press A on a game and pick
   **Take this game**. It shows up as a card on your hub. On the controller screen, move your controller to a team to play it, or leave it in the middle to watch.
 - **Weekly Strategy.** Press the **View** button on the dynasty hub (it is not under Practice). You get the Weekly Strategy screen: pick focus players, see this week's
-  coach goal and choose a gameplan focus. They give your players XP each week. You start with 3 focus players; each Whisperer coach talent your head coach owns
-  opens one more, up to 6. It works with Call Sheet's Weekly Strategy link: your gameplan focus is written to a small
+  coach goal and choose a gameplan focus. They give your players XP each week. You start with 3 focus players; each position Whisperer talent your head coach owns
+  opens one more, up to 6 (Talent Developer tree in Upgrade Coach Skills: QB, RB, WR/TE, OL, DL, LB, DB and K/P Whisperer). It works with Call Sheet's Weekly Strategy link: your gameplan focus is written to a small
   file that Call Sheet 0.14.1 or later reads, so Call Sheet's suggestions follow it, with nothing to set up.
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, in front of a crowd of about half the stadium.
   Your players also get four weeks of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
