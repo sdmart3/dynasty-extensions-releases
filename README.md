@@ -44,13 +44,13 @@ Extract the zip first. You import the `.fbmod` files in the Mod Manager, not the
 - `Dynasty-Extensions-0.1.7.fbmod`: the mod. Import it in the Mod Manager.
 - `Manual install\Plugins\`: the plugin (required). Copy the `Plugins` folder into your Mod Manager folder.
 - `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and load it last (see INSTALL).
-  There are two AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1 or 1.4.0).
+  There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1). The 1.4.1 patch is a separate download on the release page (`Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod`); the zip has the other two.
 
 See **INSTALL.md** for the steps and the load order.
 
 ## Good to know
 
-- With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod (1.3.1 or 1.4.0), all three parts work through their patch, Spring Game included.
+- With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod (1.3.1, 1.4.0 or 1.4.1), all three parts work through their patch, Spring Game included.
   The three rows sit on that mod's own League Settings screen, right after Quarter Length; its own rows stay where they were.
 - With those mods, every playoff field size they offer works with all three parts, 64 teams included (the AIO dynasty mod
   stops at 16). A dynasty has room for 150 of these mods' save rows (the game's limit); a 64-team field with everything on uses 147. So with 64 teams,
