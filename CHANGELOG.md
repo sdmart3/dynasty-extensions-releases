@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.8.1
+Fixed:
+- Weekly Strategy said "Bye week: no opponent" (and Team Profile "No game this week") in a week with a game, with Playoff Customizer,
+  Dynasty Customizer or the AIO dynasty mod. Those mods keep their settings in hidden requests, and some of them are a kind the game
+  treats as "do this first". While one is open, the list Weekly Strategy read held only those, so your game was missing from it.
+  Weekly Strategy now reads the game list the controller screen uses. It works on your existing dynasty too; you don't need a new one.
+- Press Box: your own HOME game could sit on READY forever on the controller screen when a keyboard or a second controller was
+  connected. The screen gave that one the other team and waited for it to ready up too. Your home games now use the game's own
+  screen: your controller starts on your team, and you can still move it to the opponent (to play them) or to the middle (to watch).
+  If you are stuck on READY with an older version, press B to back out.
+- The install guide now says which way round the load order goes in the Mod Manager list: base mod at the TOP, Dynasty Extensions
+  under it, the patch at the very BOTTOM.
+
+Updating from 0.1.8:
+- Replace the main mod and the plugin (the `Plugins` folder from `Manual install`). The compatibility patches are the same as 0.1.8's;
+  keep yours. If you kept your own `dynasty-extensions.ini`, keep it: the new `ctrl_select_stock_screen = 1` is applied for you. If you
+  added `ctrl_select_stock_screen = 0` yourself, change it to 1 or delete the line.
+
+Compatibility patches (separate downloads): the patches are the same as 0.1.8's. Every patch is also attached to this release on its own, with a `.sha256.txt` file. Use only the ONE patch for your base mod and put it at the very bottom of the Mod Manager list.
+
 ## 0.1.8
 Fixed:
 - Press Box: watching a game after taking control of the opponent could crash. Fixed.

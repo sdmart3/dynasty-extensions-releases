@@ -13,11 +13,12 @@ Three dynasty add-ons in one mod:
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, with attendance set to half the stadium (the empty seats show mostly in the end zones).
   Your players also get four weeks of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
 
-## What's new in 0.1.8
+## What's new in 0.1.8.1
 
-- **Watching a game after taking control of the opponent could crash. Fixed.**
-- **No longer conflicts with mods that change the controller/options menu file.** Dynasty Extensions doesn't replace that file any more, so it works alongside such mods with no patch. The AIO Broadcast mod, for example, works next to it as it is: its settings (the scorebug included) work, and you can take a game and watch it.
-- New Compatibility patch for the AIO dynasty mod 1.4.1 (now in the zip too).
+- **Weekly Strategy no longer says "Bye week" in a week you have a game.** It did that with the Playoff Customizer, the Dynasty Customizer and the AIO dynasty mod. It works on the dynasty you already have.
+- **Your own home game no longer sticks on READY** on the controller screen when a keyboard or a second controller is plugged in. Your controller starts on your team; you can still move it to the opponent (to play them) or to the middle (to watch).
+- **The install steps now say which way round the load order goes** in the Mod Manager list: your base mod at the TOP, Dynasty Extensions under it, the patch at the very BOTTOM.
+- The compatibility patches are the same as 0.1.8's.
 
 ## Turning things on and off
 
@@ -47,16 +48,16 @@ More detail settings (watch pause, the controller screen, which Weekly Strategy 
 
 Extract the zip first. You import the `.fbmod` files in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.1.8.fbmod`: the mod. Import it in the Mod Manager.
+- `Dynasty-Extensions-0.1.8.1.fbmod`: the mod. Import it in the Mod Manager.
 - `Manual install\Plugins\`: the plugin (required). Copy the `Plugins` folder into your Mod Manager folder.
-- `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and load it last (see INSTALL).
+- `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and put it at the very bottom of the Mod Manager list (see INSTALL).
   There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1).
 
 See **INSTALL.md** for the steps and the load order.
 
 ## Compatibility patches
 
-Each patch is also a separate download. Use only the one for your base mod, and load it last.
+Each patch is also a separate download. Use only the one for your base mod, and put it at the very bottom of the Mod Manager list.
 
 | You use | Patch file |
 |---|---|
