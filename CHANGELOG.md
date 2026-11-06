@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.8
+Fixed:
+- Press Box: watching a game after taking control of the opponent could crash. Fixed.
+- No longer conflicts with mods that change the controller/options menu file. Dynasty Extensions doesn't replace that file any more, so it works alongside such mods with no patch. The AIO Broadcast mod, for example, works next to it as it is: its settings (the scorebug included) work, and you can take a game and watch it.
+
+New:
+- Compatibility patch for the AIO dynasty mod 1.4.1 (it was a separate download for 0.1.7; it is in the zip now). The patches for the other base mods are rebuilt for 0.1.8.
+
+Updating from 0.1.7, 0.1.6 or 0.1.4:
+- Replace the main mod, your ONE patch AND the plugin (the `Plugins` folder from `Manual install`). If you changed `dynasty-extensions.ini`,
+  keep your copy: your choices stay, and the new options get their default values automatically.
+
 ## 0.1.7
 Fixed:
 - Spring game attendance is now really half the stadium (12,483 at JMU). In 0.1.6 the setting had no effect: the game worked the crowd out again at kickoff. The game seats fans sideline first, so the empty seats show mostly in the end zones and the sideline stands still look full. I'll be chatting with Ace about having the spring game type supported in his Dynamic Gameday Atmosphere mod, which would show a properly thinner crowd.

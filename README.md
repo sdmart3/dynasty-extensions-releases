@@ -4,7 +4,7 @@
 
 Three dynasty add-ons in one mod:
 
-- **Press Box (0.7.2).** Play or watch any game of the week. Go to EA SPORTS Network > Scores / Schedules, press A on a game and pick
+- **Press Box (0.7.3).** Play or watch any game of the week. Go to EA SPORTS Network > Scores / Schedules, press A on a game and pick
   **Take this game**. It shows up as a card on your hub. On the controller screen, move your controller to a team to play it, or leave it in the middle to watch.
 - **Weekly Strategy.** Press the **View** button on the dynasty hub (it is not under Practice). You get the Weekly Strategy screen: pick focus players, see this week's
   coach goal and choose a gameplan focus. They give your players XP each week. You start with 3 focus players; each position Whisperer talent your head coach owns
@@ -12,6 +12,12 @@ Three dynasty add-ons in one mod:
   file that Call Sheet 0.14.1 or later reads, so Call Sheet's suggestions follow it, with nothing to set up.
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, with attendance set to half the stadium (the empty seats show mostly in the end zones).
   Your players also get four weeks of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
+
+## What's new in 0.1.8
+
+- **Watching a game after taking control of the opponent could crash. Fixed.**
+- **No longer conflicts with mods that change the controller/options menu file.** Dynasty Extensions doesn't replace that file any more, so it works alongside such mods with no patch. The AIO Broadcast mod, for example, works next to it as it is: its settings (the scorebug included) work, and you can take a game and watch it.
+- New Compatibility patch for the AIO dynasty mod 1.4.1 (now in the zip too).
 
 ## Turning things on and off
 
@@ -41,10 +47,10 @@ More detail settings (watch pause, the controller screen, which Weekly Strategy 
 
 Extract the zip first. You import the `.fbmod` files in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.1.7.fbmod`: the mod. Import it in the Mod Manager.
+- `Dynasty-Extensions-0.1.8.fbmod`: the mod. Import it in the Mod Manager.
 - `Manual install\Plugins\`: the plugin (required). Copy the `Plugins` folder into your Mod Manager folder.
 - `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and load it last (see INSTALL).
-  There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1). The 1.4.1 patch is a separate download on the release page (`Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod`); the zip has the other two.
+  There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1).
 
 See **INSTALL.md** for the steps and the load order.
 
