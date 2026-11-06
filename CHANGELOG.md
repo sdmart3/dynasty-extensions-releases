@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.8.2
+Fixed:
+- Creating a NEW dynasty with the AIO dynasty mod (1.4.0 or 1.4.1) and its Dynasty Extensions patch could crash at the coach contract screen. The AIO mod's own code looks at a field on every open request when that screen finishes, and 41 of its own settings requests carry a record that does not have that field; the game sometimes read past the end of that record and crashed. The two AIO 1.4.x patches now skip that look for those requests. Only those two patches changed.
+- Existing dynasties were not affected, and the AIO dynasty mod alone is not changed by this.
+
+Updating from 0.1.8.1:
+- AIO dynasty mod 1.4.0 or 1.4.1: replace ONLY your AIO patch (remove the old Dynasty Extensions x AIO patch, import the new one, keep it at the very bottom of the list). Nothing else changes.
+- Everyone else: nothing to do. The main mod (still `Dynasty-Extensions-0.1.8.1.fbmod`), the plugin and the other four patches are the same as 0.1.8.1's.
+
+Compatibility patches (separate downloads): every patch is also attached to this release on its own, with a `.sha256.txt` file. Use only the ONE patch for your base mod and put it at the very bottom of the Mod Manager list.
+
 ## 0.1.8.1
 Fixed:
 - Weekly Strategy said "Bye week: no opponent" (and Team Profile "No game this week") in a week with a game, with Playoff Customizer,
