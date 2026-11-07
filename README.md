@@ -12,7 +12,7 @@ Three dynasty add-ons in one mod:
   file that Call Sheet 0.14.1 or later reads, so Call Sheet's suggestions follow it, with nothing to set up.
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, with attendance set to half the stadium (the empty seats show mostly in the end zones).
   Your players also get four weeks of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
-- **Spring Situations (new in 0.1.9, beta, off unless you pick it).** The spring game is played as five set situations in one game, and each one is graded A to F.
+- **Spring Situations (new in 0.1.9, beta, off unless you pick it).** You still play your spring game and get the practice XP, but the game is set up as five situations, each graded A to F.
   The grades raise or lower the spring game XP. See "Spring Situations" below.
 
 ## Turning things on and off
@@ -42,7 +42,7 @@ More detail settings (watch pause, the controller screen, which Weekly Strategy 
 
 ## Spring Situations (beta)
 
-Pick **Game + Practice + Situations** in the Spring Game row. Your spring game (starters against the second string) then plays five set situations in one game:
+Pick **Game + Practice + Situations** in the Spring Game row. You still play your spring game (starters against the second string) and get the four weeks of practice XP, but the game is set up as five situations:
 
 1. **Two-minute drill** before the half. The game starts right there: no coin toss, no kickoff.
 2. **Red-zone stand.**
@@ -77,7 +77,7 @@ See **INSTALL.md** (in the zip) for the steps and the load order.
 
 ## What's new in 0.1.9
 
-- **Spring Situations (beta).** A fifth Spring Game choice, Game + Practice + Situations, plays the spring game as five graded situations (above). It is off unless you pick it; the default is still Game + Practice.
+- **Spring Situations (beta).** A fifth Spring Game choice, Game + Practice + Situations, keeps the spring game and the practice XP and sets the game up as five graded situations (above). It is off unless you pick it; the default is still Game + Practice.
 - **Every compatibility patch is new.** They carry the new Spring Game choice, so replace your patch too (one patch only, at the very bottom of the list).
 - Includes 0.1.8.2's fix: creating a NEW dynasty with the AIO dynasty mod 1.4.0 or 1.4.1 and its patch no longer crashes at the coach contract screen.
 
