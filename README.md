@@ -12,11 +12,8 @@ Three dynasty add-ons in one mod:
   file that Call Sheet 0.14.1 or later reads, so Call Sheet's suggestions follow it, with nothing to set up.
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, with attendance set to half the stadium (the empty seats show mostly in the end zones).
   Your players also get four weeks of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
-
-## What's new in 0.1.8.2
-
-- **Fixed a random crash when creating a NEW dynasty with the AIO dynasty mod (1.4.0 or 1.4.1) and its patch.** The game could crash at the coach contract screen. Only the two AIO 1.4.x patches changed; if you use one of them, replace just that patch. Everyone else needs nothing.
-- The main mod is still 0.1.8.1 (`Dynasty-Extensions-0.1.8.1.fbmod`), and the other four patches are unchanged.
+- **Spring Situations (new in 0.1.9, beta, off unless you pick it).** The spring game is played as five set situations in one game, and each one is graded A to F.
+  The grades raise or lower the spring game XP. See "Spring Situations" below.
 
 ## Turning things on and off
 
@@ -24,7 +21,7 @@ Open **League Settings** in your dynasty (the screen is titled Dynasty Settings)
 
 | Row | Choices |
 |---|---|
-| Spring Game | Off / Game Only / Game + Practice / All Teams Practice |
+| Spring Game | Off / Game Only / Game + Practice / All Teams Practice / Game + Practice + Situations |
 | Weekly Strategy | On / Off |
 | Press Box | On / Off |
 
@@ -34,28 +31,60 @@ Spring Game choices:
 - **Game Only**: the extra week and the spring game, with game XP. No practice XP.
 - **Game + Practice** (default): the same, plus four weeks of practice XP for your team before the game (roughly one to two skill points a player).
 - **All Teams Practice**: the same as Game + Practice, and every CPU team gets the four weeks of practice XP too. CPU teams never play a game.
+- **Game + Practice + Situations** (beta): Game + Practice, and the spring game is played as Spring Situations (below).
 
 - In a brand-new dynasty these rows are greyed out until your first Advance. Until then everything runs at its default (all on, Game + Practice).
-- Weekly Strategy and Press Box change right away. The Spring Game choice counts at the next preseason Advance.
+- Weekly Strategy and Press Box change right away. The Spring Game choice counts at the next preseason Advance (the Advance into the spring week).
 - Turning one off leaves the other two alone.
 
 More detail settings (watch pause, the controller screen, which Weekly Strategy panels fill in, the Call Sheet file) are in
 `Plugins\DynastyExtensions\dynasty-extensions.ini`. You don't need to touch it.
 
+## Spring Situations (beta)
+
+Pick **Game + Practice + Situations** in the Spring Game row. Your spring game (starters against the second string) then plays five set situations in one game:
+
+1. **Two-minute drill** before the half. The game starts right there: no coin toss, no kickoff.
+2. **Red-zone stand.**
+3. **3rd and medium.**
+4. **Backed up** at your own 2.
+5. **Protect the lead**: a 3-point lead late in the game.
+
+Each one starts the next time that side has the ball in its half; the game is played normally in between. Each situation gets a letter from A to F
+(for example the two-minute drill: touchdown A, field goal B, no points D, turnover F). At the next Advance the letters scale the spring game XP:
+your starting offense gets the average of its three situations, your starting defense the average of its two, from 125 % of the normal spring game XP (A)
+down to 60 % (F). A situation the game ended before you reached it counts as a C (normal XP). Kickers, punters and the second string always get the normal XP.
+If no situation ran at all (you quit, or the plugin was not loaded), everyone gets the normal spring game XP.
+
+- **When to pick it:** pick it while you are on Preseason Week 0, before the Advance into the spring week (the extra preseason week). If you change it once the spring week has started, it waits until next year.
+  Your pick stays from year to year.
+  In a brand-new dynasty the rows are greyed out until the first Advance, so the first season's spring game can't use it.
+- **Dynasty Midgame Save:** with Midgame Save 0.2.4 or later installed, Midgame Save runs the start of the spring game for Spring Situations (nothing to set up).
+  With an older Midgame Save, Spring Situations switch themselves off for that game: the spring game plays normally with the normal XP.
+- **Known:** on downs 1 to 3 the CPU defense doesn't use its situation plays, so a two-minute drill or red-zone stand may feel less realistic.
+- Needs the Dynasty Extensions plugin (see INSTALL). `Plugins\DynastyExtensions\wsdata.log` has a line for each situation, its result and its letter.
+
 ## What's in the download
 
 Extract the zip first. You import the `.fbmod` files in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.1.8.1.fbmod`: the mod (still 0.1.8.1 in this release). Import it in the Mod Manager.
+- `Dynasty-Extensions-0.1.9.fbmod`: the mod. Import it in the Mod Manager.
 - `Manual install\Plugins\`: the plugin (required). Copy the `Plugins` folder into your Mod Manager folder.
 - `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and put it at the very bottom of the Mod Manager list (see INSTALL).
   There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1).
 
-See **INSTALL.md** for the steps and the load order.
+See **INSTALL.md** (in the zip) for the steps and the load order.
+
+## What's new in 0.1.9
+
+- **Spring Situations (beta).** A fifth Spring Game choice, Game + Practice + Situations, plays the spring game as five graded situations (above). It is off unless you pick it; the default is still Game + Practice.
+- **Every compatibility patch is new.** They carry the new Spring Game choice, so replace your patch too (one patch only, at the very bottom of the list).
+- Includes 0.1.8.2's fix: creating a NEW dynasty with the AIO dynasty mod 1.4.0 or 1.4.1 and its patch no longer crashes at the coach contract screen.
 
 ## Compatibility patches
 
 Each patch is also a separate download. Use only the one for your base mod, and put it at the very bottom of the Mod Manager list.
+All of them are new in 0.1.9: use them with the 0.1.9 main mod.
 
 | You use | Patch file |
 |---|---|
@@ -70,11 +99,11 @@ If a base mod updates before a new release, a new patch may be added here as a s
 
 ## Good to know
 
-- With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod (1.3.1, 1.4.0 or 1.4.1), all three parts work through their patch, Spring Game included.
+- With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod (1.3.1, 1.4.0 or 1.4.1), all three parts work through their patch, Spring Game and Spring Situations included.
   The three rows sit on that mod's own League Settings screen, right after Quarter Length; its own rows stay where they were.
 - With those mods, every playoff field size they offer works with all three parts, 64 teams included (the AIO dynasty mod
   stops at 16). A dynasty has room for 150 of these mods' save rows (the game's limit); a 64-team field with everything on uses 147. So with 64 teams,
-  leave Playoff Sites at their defaults or change only one or two (each custom site you save takes one more row).
+  leave Playoff Sites at their defaults or change only one or two (each custom site you save takes one more row). Spring Situations use no extra row.
 - A 64-team field needs a dynasty with room for the extra playoff games: one started with Playoff Customizer on, or one widened
   with the CFB 27 Playoff Room app. That is Playoff Customizer's own rule, not this mod's.
 - The spring game's second string plays on a stand-in team for that one week, so it carries your school's nickname (for example the Dukes against James Madison) and you can tell the two sides apart. It's put back exactly as it was at the next Advance. The post-game screen shows a 1-0 / 0-1 record, but it doesn't stick: you start week 0 at 0-0.
