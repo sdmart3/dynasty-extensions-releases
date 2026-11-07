@@ -2,8 +2,8 @@
 
 ## 0.1.9
 New:
-- Spring Situations (beta, off unless you pick it): a fifth Spring Game choice in League Settings, **Game + Practice + Situations**. You still play the spring game
-  (your starters against your second string) and get the practice XP, but the game is set up as five situations: a two-minute drill before the half (the game starts there, no coin
+- Spring Situations (beta, off unless you pick it): a fifth Spring Game choice in League Settings, **Game + Practice + Situations**. The spring game
+  (your starters against your second string) plays five set situations in one game: a two-minute drill before the half (the game starts there, no coin
   toss and no kickoff), a red-zone stand, 3rd and medium, backed up at your own 2, and protecting a 3-point lead late. Each one gets a letter from A to F,
   and at the next Advance the letters scale the spring game XP for your starting offense and defense (A = 125 %, F = 60 %). A situation the game ended
   before you reached it counts as a C (normal XP); kickers, punters and the second string get the normal XP.
