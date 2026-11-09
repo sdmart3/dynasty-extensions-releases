@@ -1,5 +1,37 @@
 # Changelog
 
+## 0.2.0
+New:
+- Spring Practice (beta, off unless you pick it): a fifth Spring Game choice in League Settings. The preseason gets four extra weeks instead of one.
+  Weeks 1 to 3 are practice weeks, each with a drill game on the hub (your starters against your second string) that plays five set situations: a
+  two-minute drill before the half (the game starts there, no coin toss and no kickoff), a red-zone stand, 3rd and medium, backed up at your own 2, and
+  protecting a 3-point lead late. Each situation gets a letter from A to F. Week 4 is the normal spring game (kickoff, full game, normal XP).
+- Practice XP is the same four weeks' worth as Game + Practice, paid one week at a time (all C = the same total). Weeks 2 to 4 are scaled for your starting offense and defense by the
+  drill game of the week before (A 125 %, B 110 %, C 100 %, D 80 %, F 60 %; offense = S1 / S3 / S4, defense = S2 / S5). A situation the game ended before you reached it, or a drill game you skip, counts as a C (normal XP).
+  Kickers, punters and the second string get the normal XP.
+- The drill grades show on the scorebug as they happen (the down-and-distance box), tested with the stock scorebug and CFB on CN (other scorebug mods show it if they use the game's down-and-distance text). Off with
+  `spring_hud_grades = 0` in the ini.
+- Each extra week moves the season one week later, so with Spring Practice the national title game is in February.
+- Pick it while you are on Preseason Week 0. A change made once the extra weeks have started waits until next year. In a brand-new dynasty the rows are
+  greyed out until the first Advance, so the first season can't use it.
+- Dynasty Midgame Save: you don't need it. If you already use it, update it to 0.2.4 so the two work together (Midgame Save then starts each drill game).
+  With an older Midgame Save the drill game plays as a normal game (no situations, normal practice XP that week).
+- Every compatibility patch carries it, with no extra save row (played through in testing with Playoff Customizer; the others are built the same way).
+
+Known:
+- On 1st to 3rd down the CPU defense calls ordinary plays instead of situation plays, so a two-minute drill or red-zone stand can feel a bit easier.
+- Your starters play every drill game: they take wear (healed after each week) and can get hurt.
+
+The default Spring Game choice is still Game + Practice, and Off / Game Only / Game + Practice / All Teams Practice work exactly as in 0.1.8.2.
+
+Updating from 0.1.8.2, 0.1.8.1 or earlier:
+- Replace the main mod (`Dynasty-Extensions-0.2.0.fbmod`), the plugin (the `Plugins` folder from `Manual install`) AND your ONE patch: every patch is
+  new in 0.2.0 (they carry Spring Practice). If you edited `Plugins\DynastyExtensions\dynasty-extensions.ini`, copy it somewhere safe first, copy the new `Plugins` folder over the old one, then put your ini back; the new settings use their defaults.
+- If you briefly had 0.1.9 (up for a few hours on 2026-11-07, then taken down): update the same way. Its "Game + Practice + Situations" choice is now Spring Practice.
+
+Compatibility patches (separate downloads): every patch is also attached to this release on its own, with a `.sha256.txt` file. Use only the ONE patch for your base mod and put it at the very bottom of the Mod Manager list.
+
+
 ## 0.1.8.2
 Fixed:
 - Creating a NEW dynasty with the AIO dynasty mod (1.4.0 or 1.4.1) and its Dynasty Extensions patch could crash at the coach contract screen. The AIO mod's own code looks at a field on every open request when that screen finishes, and 41 of its own settings requests carry a record that does not have that field; the game sometimes read past the end of that record and crashed. The two AIO 1.4.x patches now skip that look for those requests. Only those two patches changed.
