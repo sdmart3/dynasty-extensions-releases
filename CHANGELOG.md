@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.3
+Fixed:
+- Spring game in leagues where a mod replaced the five stock FCS teams: your second string plays as one of your real FCS schools, which is put back exactly after the spring.
+- Spring restore fixed on saves with lots of other mods' data (the stand-in school is now put back even when the save carries many other mods' rows).
+- Uninstall-crash fix: removing Dynasty Extensions no longer crashes saves at a stage end. Old entries are converted at your first Advance after updating.
+
+Before you remove it: update to 0.2.3 and Advance once; after that it is safe to remove. If a save already crashes after removing an older version: turn Dynasty Extensions back on, load the save, Advance once, then remove it.
+
+Updating from 0.2.0: replace the main mod (`Dynasty-Extensions-0.2.3.fbmod`) and your ONE patch (every patch is new in 0.2.3), then Advance once. The plugin is unchanged since 0.2.0. From anything older, replace the plugin too.
+
+Compatibility patches (separate downloads): every patch is also attached to this release on its own, with a `.sha256.txt` file. Use only the ONE patch for your base mod and put it at the very bottom of the Mod Manager list.
+
 ## 0.2.0
 New:
 - Spring Practice (beta, off unless you pick it): a fifth Spring Game choice in League Settings. The preseason gets four extra weeks instead of one.
