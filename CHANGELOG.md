@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0
+New:
+- Practice drills in your dynasty: on Weekly Strategy's Team Profile, START TRAINING opens Road to Glory's practice drill menu (Team drills and Skill drills for your drill player's position). The drill player is your first filled focus player; X on a filled focus card picks another one (his drills load the next time you open Weekly Strategy). He is the one on the field in the drill; your real depth chart is never changed.
+- Drill XP: bronze +100, silver +250, gold +500, once per player per week (replaying only tops up to a better medal). `drill_xp_pct` in the ini scales it (50 = these numbers, 100 = the full Road to Glory table, 0 = none). A drill does not count as the week's practice plan.
+
+Everything else is the same as 0.2.3. The plugin is new (replace yours; keep your ini and put it back, the new drill settings are added on their own). The compatibility patches are unchanged: keep your 0.2.3 patch or use the 0.3.0 one.
+
 ## 0.2.3
 Fixed:
 - Spring game in leagues where a mod replaced the five stock FCS teams: your second string plays as one of your real FCS schools, which is put back exactly after the spring.

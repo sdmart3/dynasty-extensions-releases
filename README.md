@@ -7,7 +7,7 @@ Three dynasty add-ons in one mod:
 - **Press Box (0.7.3).** Play or watch any game of the week. Go to EA SPORTS Network > Scores / Schedules, press A on a game and pick
   **Take this game**. It shows up as a card on your hub. On the controller screen, move your controller to a team to play it, or leave it in the middle to watch.
 - **Weekly Strategy.** Press the **View** button on the dynasty hub (it is not under Practice). You get the Weekly Strategy screen: pick focus players, see this week's
-  coach goal and choose a gameplan focus. They give your players XP each week. You start with 3 focus players; each position Whisperer talent your head coach owns
+  coach goal and choose a gameplan focus. They give your players XP each week. **New in 0.3.0:** START TRAINING on Team Profile opens Road to Glory's practice drills for your players (see "Practice drills" below). You start with 3 focus players; each position Whisperer talent your head coach owns
   opens one more, up to 6 (Talent Developer tree in Upgrade Coach Skills: QB, RB, WR/TE, OL, DL, LB, DB and K/P Whisperer). It works with Call Sheet's Weekly Strategy link: your gameplan focus is written to a small
   file that Call Sheet 0.14.1 or later reads, so Call Sheet's suggestions follow it, with nothing to set up.
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, with attendance set to half the stadium (the empty seats show mostly in the end zones).
@@ -42,6 +42,25 @@ Spring Game choices:
 
 More detail settings (watch pause, the controller screen, which Weekly Strategy panels fill in, the Call Sheet file, the scorebug text) are in
 `Plugins\DynastyExtensions\dynasty-extensions.ini`. You don't need to touch it.
+
+## Practice drills (new in 0.3.0)
+
+Play Road to Glory's practice drills with your own players, in your dynasty.
+
+1. Open **Weekly Strategy** (the **View** button on the dynasty hub) and go to **Team Profile**.
+2. Press **START TRAINING**. The practice drill menu opens: Team drills and Skill drills for your drill player's position. Pick one, press Continue on the instructions, play it, and you land back in Weekly Strategy.
+3. **Who plays the drill:** your first filled focus player (pick at least one focus player on Team Profile first). To pick someone else, press **X** on any filled focus card (the hint at the bottom says "Set drill player"). His drills show up the next time you open Weekly Strategy: back out to the dynasty hub and press View again. Until then his card says "Drill player (reopen Weekly Strategy)".
+4. The drill player is the one on the field in the drill. Your real depth chart is never changed.
+
+**XP:** bronze +100, silver +250, gold +500, paid once per player per week. Replaying a drill only tops you up to a better medal. A drill does not count as that week's practice plan.
+
+**Settings** (in `Plugins\DynastyExtensions\dynasty-extensions.ini`, under `[Weekly Strategy]`; you don't need to touch them):
+
+- `drill_xp_pct = 50` is the default. 100 pays the full Road to Glory table (200 / 500 / 1000), 0 pays nothing.
+- `drill_xp = 0` turns the drill XP off. `drill_pick = 0` turns the X pick off. `drill_player_swap = 0` makes START TRAINING open an empty menu.
+- Leave `drill_apply` at 0 (it skips a Road to Glory step that would crash a dynasty).
+
+Needs the game's current version (the 29 October update).
 
 ## Spring Practice (beta)
 
@@ -107,14 +126,20 @@ Good to know:
 
 Extract the zip first. You import the `.fbmod` files in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.2.3.fbmod`: the mod. Import it in the Mod Manager.
-- `Manual install\Plugins\`: the plugin (required). Copy the `Plugins` folder into your Mod Manager folder.
+- `Dynasty-Extensions-0.3.0.fbmod`: the mod. Import it in the Mod Manager.
+- `Manual install\Plugins\`: the plugin (required; new in 0.3.0, so replace your old one). Copy the `Plugins` folder into your Mod Manager folder.
 - `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and put it at the very bottom of the Mod Manager list (see INSTALL).
   There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1).
 
 See **INSTALL.md** (in the zip) for the steps and the load order.
 
-## What's new in 0.2.3
+## What's new in 0.3.0
+
+- **Practice drills in your dynasty.** Weekly Strategy > Team Profile > START TRAINING opens Road to Glory's practice drills. X on a focus player picks who plays them. Bronze / silver / gold pay +100 / +250 / +500 XP, once per player per week (adjustable, see "Practice drills").
+- **The plugin is new** (the drills live in it): copy the new `Plugins` folder over the old one. If you edited `dynasty-extensions.ini`, keep a copy and put it back; the new drill settings are added with their defaults.
+- **Everything else is the same as 0.2.3.** The compatibility patches are unchanged: keep your 0.2.3 patch, or use the 0.3.0 one (same thing).
+
+## What came in 0.2.3
 
 - **Spring game in leagues where a mod replaced the five stock FCS teams.** Your second string now plays as one of your real FCS schools, which is put back exactly after the spring.
 - **Spring restore fixed on saves with lots of other mods' data.** The stand-in school is now put back even when your save is full of other mods' rows (for example Playoff Customizer's).
@@ -144,21 +169,21 @@ See **INSTALL.md** (in the zip) for the steps and the load order.
 
 ## Before you remove it
 
-Update to 0.2.3 and Advance once; after that it is safe to remove. If a save already crashes after removing an older version: turn Dynasty Extensions back on, load the save, Advance once, then remove it. The steps are in INSTALL.md (Uninstall / going back, in the zip).
+Update to 0.2.3 or later and Advance once; after that it is safe to remove. If a save already crashes after removing an older version: turn Dynasty Extensions back on, load the save, Advance once, then remove it. The steps are in INSTALL.md (Uninstall / going back, in the zip).
 
 ## Compatibility patches
 
 Each patch is also a separate download. Use only the one for your base mod, and put it at the very bottom of the Mod Manager list.
-All of them are new in 0.2.3: use them with the 0.2.3 main mod.
+The patches are unchanged since 0.2.3 (the 0.3.0 files are the same patches): if you already have your 0.2.3 patch, keep it. Use them with the 0.2.3 or 0.3.0 main mod, not an older one.
 
 | You use | Patch file | sha256 |
 |---|---|---|
-| Playoff Customizer 1.3.0 | [`Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod) | `774f4d315684cd66cf930ce2492a8520253187a4a9ee5835ff3597903f004831` |
-| Dynasty Customizer 1.1.0 | [`Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod) | `e3f11cb09243cee778f05b032ce5f22ca1b087d87ef35ae7f8da69490d86b685` |
-| Conference Customizer 1.0.2 | [`Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod) | `ce9e8fa2406218ab61730dc6c6186284e6be6389e509531c4525b379a0fa091f` |
-| AIO Dynasty Mod v1.3.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod) | `64c416208161735443a135e0af852f764398f59492def58272cabe24ead558f1` |
-| AIO Dynasty Mod v1.4.0 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod) | `535a8434c31b90071fdd1cd7b50459eafa67f03b580e418b6f6906a406b4cdb4` |
-| AIO Dynasty Mod v1.4.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod) | `b70e6a3780cfc7e40050911de7e8a7528e66e9c3eb7085c1d39b4b4b3ca6e343` |
+| Playoff Customizer 1.3.0 | [`Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod) | `a5ad35f73f94d95e8ce87eeb25a5e0aa8452498a678bc15d64d7cd2e2239a098` |
+| Dynasty Customizer 1.1.0 | [`Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod) | `e47d085dba5140ddb98d491ad523245b1332a3ca8cfd668c1b6289b4ff080343` |
+| Conference Customizer 1.0.2 | [`Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod) | `321cb8de40555ef7170a69a51c8ed30ff71027197787bf7aaaedd4a3ddfe6a0d` |
+| AIO Dynasty Mod v1.3.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod) | `af911bd179d2b73b24e82ded32ea4620076e670cda486fe648f7b62e92cc8432` |
+| AIO Dynasty Mod v1.4.0 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod) | `fd4796c90c406521abc7bd35e31427ed8670182f22291a4cefef2d64352c9f07` |
+| AIO Dynasty Mod v1.4.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod) | `b1c1cd80f177681fee1d92ce5ff488dfca755e9396ecfb84f7efc6ecbe574727` |
 
 If a base mod updates before a new release, a new patch may be added here as a separate download.
 
@@ -166,7 +191,7 @@ If a base mod updates before a new release, a new patch may be added here as a s
 
 | File | sha256 |
 |---|---|
-| `Dynasty-Extensions-0.2.3.zip` | `dd6425fa7b9de2da1ba8c46cf458f5bad6ed9c327dd90381ecdac89dc562e7a0` |
-| `Dynasty-Extensions-0.2.3.fbmod` (inside the zip) | `36ba69cda05b0ed675ca0b7142dcc1dd97c21f89c85fc2284d596ac84a8bc28f` |
+| `Dynasty-Extensions-0.3.0.zip` | `4928251131b130456483b91ef93fba0904d02b6e50c933119a05a5fcdcbbb060` |
+| `Dynasty-Extensions-0.3.0.fbmod` (inside the zip) | `dc13e6a2d9d920ab9028002c390551a06fa23bafe5712f1c80cccb68785ca218` |
 
 Every file is also attached with its own `.sha256.txt`.
