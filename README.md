@@ -2,21 +2,45 @@
 
 **Download:** https://github.com/sdmart3/dynasty-extensions-releases/releases/latest (the zip has the mod, the plugin, the patches and the install steps).
 
-Three dynasty add-ons in one mod:
+Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks (the spring game).
+
+## Install in 4 steps
+
+Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip. Back up your dynasty save before you try it.
+
+1. Close the game and the Mod Manager. Copy the `Plugins` folder from `Manual install` into your Mod Manager folder (next to `MMCModManager.exe`). **The plugin is required**: without it nothing of Dynasty Extensions runs.
+2. Open the Mod Manager, import `Dynasty-Extensions-0.4.0.fbmod` and turn it on.
+3. If you also use one of the mods in the table below, import its ONE patch from `Compatibility patches` too, at the very bottom of the Mod Manager list.
+4. Start the Mod Manager again (it loads plugins when it starts), launch the game from it and load your dynasty. About 30 seconds after the game starts the plugin's helper is in.
+
+Then open `Plugins\DynastyExtensions\dynasty-extensions-merge.txt`: its first line says `Dynasty Extensions is ON`. If it says `ready`, go back to the main menu and load the dynasty again. If it says `OFF this session because ...`, see "Is it on?" below.
+
+Updating from 0.3.0 or older: see INSTALL.md (replace the mod, the plugin and your patch).
+
+## Which patch do I need?
+
+| You also use | What you need |
+|---|---|
+| Nothing that changes dynasty logic | Nothing. It works as soon as the mod and the plugin are in. |
+| DRI+ 3.0 | Nothing. Load order: DRI+ on top, Dynasty Extensions under it. (Older DRI+ versions are not covered.) |
+| Conference Customizer 1.0.2 | The small Conference Customizer patch (screens only). The 0.3.0 patch also works. |
+| Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0, AIO dynasty mod 1.3.1 / 1.4.0 / 1.4.1 | The patch for that mod. Import only ONE patch. |
+| Playoff Customizer 1.1.0 | No patch. Dynasty Extensions stays off while you use it (see "Playoff Customizer 1.1.0" below). |
+
+**What changed in 0.4.0, in plain words:** Dynasty Extensions no longer carries its own copy of the game's dynasty logic file. A small helper in the plugin adds that logic while the game runs, each time you load a dynasty, on top of whatever the game (or another mod) loaded. That is why DRI+ 3.0 works with no patch and Conference Customizer needs only a small screens patch.
+
+## What it does
 
 - **Press Box (0.7.3).** Play or watch any game of the week. Go to EA SPORTS Network > Scores / Schedules, press A on a game and pick
   **Take this game**. It shows up as a card on your hub. On the controller screen, move your controller to a team to play it, or leave it in the middle to watch.
 - **Weekly Strategy.** Press the **View** button on the dynasty hub (it is not under Practice). You get the Weekly Strategy screen: pick focus players, see this week's
-  coach goal and choose a gameplan focus. They give your players XP each week. **New in 0.3.0:** START TRAINING on Team Profile opens Road to Glory's practice drills for your players (see "Practice drills" below). You start with 3 focus players; each position Whisperer talent your head coach owns
+  coach goal and choose a gameplan focus. They give your players XP each week. START TRAINING on Team Profile opens Road to Glory's practice drills for your players (see "Practice drills" below). You start with 3 focus players; each position Whisperer talent your head coach owns
   opens one more, up to 6 (Talent Developer tree in Upgrade Coach Skills: QB, RB, WR/TE, OL, DL, LB, DB and K/P Whisperer). It works with Call Sheet's Weekly Strategy link: your gameplan focus is written to a small
   file that Call Sheet 0.14.1 or later reads, so Call Sheet's suggestions follow it, with nothing to set up.
 - **Spring Game.** One extra preseason week with a spring game: your starters against your second string, with attendance set to half the stadium (the empty seats show mostly in the end zones).
   Your players also get four weeks' worth of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
-  - **New in 0.2.0: Spring Practice** (beta, off unless you pick it). Four extra preseason weeks instead of one: three practice weeks, each with a drill game
+  - **Spring Practice** (beta, off unless you pick it). Four extra preseason weeks instead of one: three practice weeks, each with a drill game
     of five graded situations, then the normal spring game. The grades raise or lower the next week's practice XP. See "Spring Practice" below.
-
-You install two things: the mod (`.fbmod`, imported in the Mod Manager) and the plugin (the `Plugins` folder, copied into your Mod Manager folder). See INSTALL.md in the zip.
-
 ## Turning things on and off
 
 Open **League Settings** in your dynasty (the screen is titled Dynasty Settings). Three rows sit right after Quarter Length, under Clock Management:
@@ -43,7 +67,21 @@ Spring Game choices:
 More detail settings (watch pause, the controller screen, which Weekly Strategy panels fill in, the Call Sheet file, the scorebug text) are in
 `Plugins\DynastyExtensions\dynasty-extensions.ini`. You don't need to touch it.
 
-## Practice drills (new in 0.3.0)
+
+## Is it on? (new in 0.4.0)
+
+Open `Plugins\DynastyExtensions\dynasty-extensions-merge.txt` after you load a dynasty. Its first line says `Dynasty Extensions is ON` or `Dynasty Extensions is OFF this session because ...`, and the next line says what to do. When it is ON you do not have to do anything.
+
+When it is OFF, nothing of Dynasty Extensions runs, and nothing that needs it can be pressed: the Spring Game, Weekly Strategy and Press Box rows in League Settings are greyed and read **Off this session**, Scores / Schedules shows the game's own menu (no "Take this game"), and the dynasty hub has no Weekly Strategy View button. Your dynasty is not harmed: you can play, advance and save, and your settings are kept for the next time it is ON.
+
+If you loaded the dynasty before the helper was in (about 30 seconds after the game starts), the file still says "ready": go back to the main menu and load the dynasty again.
+
+## Playoff Customizer 1.1.0
+
+There is no Dynasty Extensions patch for Playoff Customizer 1.1.0. If you use it, Dynasty Extensions turns itself off while you play: the three League Settings rows are greyed and read **Off this session**, there is no spring game, no Weekly Strategy View button and no "Take this game". That is on purpose, not a bug. Your dynasty is not harmed and Playoff Customizer works exactly as it did. The merge file says `Dynasty Extensions is OFF this session because another mod changed the same dynasty logic and no matching patch is loaded`.
+
+To get Dynasty Extensions working, update to Playoff Customizer 1.3.0 and use the Playoff Customizer 1.3.0 patch from this download (load order: Playoff Customizer on top, Dynasty Extensions under it, the patch at the very bottom). Or just keep playing as you are.
+## Practice drills
 
 Play Road to Glory's practice drills with your own players, in your dynasty.
 
@@ -122,22 +160,31 @@ Good to know:
   (https://github.com/sdmart3/dynasty-midgame-save-releases/releases/latest) so the two work together: Midgame Save then starts each drill game, with nothing
   to set up. With an older Midgame Save the drill game plays as a normal game (no situations, normal practice XP that week).
 
+
 ## What's in the download
 
 Extract the zip first. You import the `.fbmod` files in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.3.0.fbmod`: the mod. Import it in the Mod Manager.
-- `Manual install\Plugins\`: the plugin (required; new in 0.3.0, so replace your old one). Copy the `Plugins` folder into your Mod Manager folder.
-- `Compatibility patches\`: only if you use one of these mods. Import only the ONE patch for the base mod you have, and put it at the very bottom of the Mod Manager list (see INSTALL).
+- `Dynasty-Extensions-0.4.0.fbmod`: the mod. Import it in the Mod Manager.
+- `Manual install\Plugins\`: the plugin (**required**; new in 0.4.0, so replace your old one: it now also holds `demerge.dll` and `de-expr.pack`). Copy the `Plugins` folder into your Mod Manager folder.
+- `Compatibility patches\`: six patch files, only if you use one of those mods (table below). Import only the ONE patch for the base mod you have, and put it at the very bottom of the Mod Manager list (see INSTALL).
   There are three AIO dynasty mod patches: pick the one that matches your AIO version (1.3.1, 1.4.0 or 1.4.1).
 
 See **INSTALL.md** (in the zip) for the steps and the load order.
 
-## What's new in 0.3.0
+## What's new in 0.4.0
+
+- **Works with other mods that change the dynasty logic, with no copy of that logic in its own file.** A helper in the plugin adds it while the game runs, each time you load a dynasty, on top of whatever the game or another mod loaded.
+- **DRI+ 3.0 works with Dynasty Extensions with no patch.** Conference Customizer 1.0.2 needs only a small screens patch.
+- **`dynasty-extensions-merge.txt`** (in `Plugins\DynastyExtensions`) says in one line whether Dynasty Extensions is ON this session, and why not if it is OFF.
+- **Nothing breaks when it can't run.** In a session where Dynasty Extensions is OFF, the Spring Game, Weekly Strategy and Press Box rows read "Off this session", and the Weekly Strategy View button and "Take this game" are not shown.
+- **The plugin is required now, and it is new:** replace your old `Plugins` folder (keep a copy of your `dynasty-extensions.ini` first).
+- **Playoff Customizer 1.1.0** has no patch: Dynasty Extensions stays off and says so; your dynasty is not affected.
+- **Everything else is the same as 0.3.0:** Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as before. The Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and AIO dynasty mod patches carry the same content as the 0.3.0 ones.
+
+## What came in 0.3.0
 
 - **Practice drills in your dynasty.** Weekly Strategy > Team Profile > START TRAINING opens Road to Glory's practice drills. X on a focus player picks who plays them. Bronze / silver / gold pay +100 / +250 / +500 XP, once per player per week (adjustable, see "Practice drills").
-- **The plugin is new** (the drills live in it): copy the new `Plugins` folder over the old one. If you edited `dynasty-extensions.ini`, keep a copy and put it back; the new drill settings are added with their defaults.
-- **Everything else is the same as 0.2.3.** The compatibility patches are unchanged: keep your 0.2.3 patch, or use the 0.3.0 one (same thing).
 
 ## What came in 0.2.3
 
@@ -158,12 +205,12 @@ See **INSTALL.md** (in the zip) for the steps and the load order.
 - With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod (1.3.1, 1.4.0 or 1.4.1), all three parts work through their patch, Spring Game and Spring Practice included.
   The three rows sit on that mod's own League Settings screen, right after Quarter Length; its own rows stay where they were.
 - With those mods, every playoff field size they offer works with all three parts, 64 teams included (the AIO dynasty mod
-  stops at 16). A dynasty has room for 150 of these mods' save rows (the game's limit); a 64-team field with everything on uses 147. So with 64 teams,
+  stops at 16). Your dynasty has room for 150 rows of these mods' settings (the game's limit); a 64-team field with everything on uses 147. So with 64 teams,
   leave Playoff Sites at their defaults or change only one or two (each custom site you save takes one more row). Spring Practice uses no extra row.
 - A 64-team field needs a dynasty with room for the extra playoff games: one started with Playoff Customizer on, or one widened
   with the CFB 27 Playoff Room app. That is Playoff Customizer's own rule, not this mod's.
 - The spring game's second string plays on a stand-in team (one of your real FCS schools if a mod replaced the five stock FCS teams), so it carries your school's nickname (for example the Dukes against James Madison) and you can tell the two sides apart. It's put back exactly as it was at the next Advance. The post-game screen shows a 1-0 / 0-1 record, but it doesn't stick: you start week 0 at 0-0.
-- DRI+ replaces the same dynasty files as this mod, so it can't be used with Dynasty Extensions (or with a base mod plus its Dynasty Extensions patch).
+- DRI+ 3.0 works with Dynasty Extensions with no patch (older DRI+ versions are not covered).
 - Don't use this together with the separate Press Box, Weekly Strategy or Preseason Weeks mods. This replaces them.
 - Back up your dynasty save before you try it.
 
@@ -173,17 +220,17 @@ Update to 0.2.3 or later and Advance once; after that it is safe to remove. If a
 
 ## Compatibility patches
 
-Each patch is also a separate download. Use only the one for your base mod, and put it at the very bottom of the Mod Manager list.
-The patches are unchanged since 0.2.3 (the 0.3.0 files are the same patches): if you already have your 0.2.3 patch, keep it. Use them with the 0.2.3 or 0.3.0 main mod, not an older one.
+Each patch is also a separate download. Use only the one for your base mod, and put it at the very bottom of the Mod Manager list. Use them with the 0.4.0 main mod and the 0.4.0 plugin.
+Five of the six carry the same content as the 0.3.0 patches (Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0, AIO dynasty mod 1.3.1 / 1.4.0 / 1.4.1): they are labelled 0.4.0 now. The Conference Customizer 1.0.2 patch is new in 0.4.0 (screens only; the 0.3.0 one also works).
 
 | You use | Patch file | sha256 |
 |---|---|---|
-| Playoff Customizer 1.3.0 | [`Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod) | `a5ad35f73f94d95e8ce87eeb25a5e0aa8452498a678bc15d64d7cd2e2239a098` |
-| Dynasty Customizer 1.1.0 | [`Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod) | `e47d085dba5140ddb98d491ad523245b1332a3ca8cfd668c1b6289b4ff080343` |
-| Conference Customizer 1.0.2 | [`Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod) | `321cb8de40555ef7170a69a51c8ed30ff71027197787bf7aaaedd4a3ddfe6a0d` |
-| AIO Dynasty Mod v1.3.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod) | `af911bd179d2b73b24e82ded32ea4620076e670cda486fe648f7b62e92cc8432` |
-| AIO Dynasty Mod v1.4.0 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod) | `fd4796c90c406521abc7bd35e31427ed8670182f22291a4cefef2d64352c9f07` |
-| AIO Dynasty Mod v1.4.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod) | `b1c1cd80f177681fee1d92ce5ff488dfca755e9396ecfb84f7efc6ecbe574727` |
+| Playoff Customizer 1.3.0 | [`Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Playoff-Customizer-1.3.0-patch.fbmod) | `d6a65b8e75800d477a628de8676912973b5cf5f6bd8d3c6365ac1d2b9c719861` |
+| Dynasty Customizer 1.1.0 | [`Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Dynasty-Customizer-1.1.0-patch.fbmod) | `ab8dfa2e05ee92ad15c0b185db04839080f6dcba72a3256b449a54e716a716d7` |
+| Conference Customizer 1.0.2 | [`Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-Conference-Customizer-1.0.2-patch.fbmod) | `1eedf1ac04149aa88df0e3c92d2da4e3e52e6381ce39e4abd2a5f1886757bf06` |
+| AIO Dynasty Mod v1.3.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.3.1-patch.fbmod) | `db04b4afc81c852356549aa65fceb62068ff42710544e13ddca49056d4f710e3` |
+| AIO Dynasty Mod v1.4.0 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.0-patch.fbmod) | `a0f16a6d7f35da5ed39c6639e1094fd046a853abfe601eafcda40cdf70a1b8da` |
+| AIO Dynasty Mod v1.4.1 | [`Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod`](https://github.com/sdmart3/dynasty-extensions-releases/releases/latest/download/Dynasty-Extensions-x-AIO-Dynasty-1.4.1-patch.fbmod) | `2f3d4cfc4982d4d0daaca3c2c2498ee49b6763da1fdee523b151815ffdd4e66f` |
 
 If a base mod updates before a new release, a new patch may be added here as a separate download.
 
@@ -191,7 +238,6 @@ If a base mod updates before a new release, a new patch may be added here as a s
 
 | File | sha256 |
 |---|---|
-| `Dynasty-Extensions-0.3.0.zip` | `4928251131b130456483b91ef93fba0904d02b6e50c933119a05a5fcdcbbb060` |
-| `Dynasty-Extensions-0.3.0.fbmod` (inside the zip) | `dc13e6a2d9d920ab9028002c390551a06fa23bafe5712f1c80cccb68785ca218` |
+| `Dynasty-Extensions-0.4.0.fbmod` (inside the zip) | `c42a0ce0a5c27129ecd5e894d2422ffcd484318a22ddc3aead63c1563536039f` |
 
-Every file is also attached with its own `.sha256.txt`.
+The zip's own checksum is on the release page (`Dynasty-Extensions-0.4.0.sha256.txt`). Every file is also attached with its own `.sha256.txt`.

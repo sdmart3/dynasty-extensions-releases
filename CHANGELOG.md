@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.0
+New:
+- Dynasty Extensions works with other mods that change the dynasty logic without a copy of that logic in its own file. A helper in the plugin adds it while the game runs, each time you load a dynasty, on top of whatever the game or another mod loaded.
+- DRI+ 3.0 works with Dynasty Extensions with no patch.
+- Conference Customizer 1.0.2 needs only a small screens patch.
+- dynasty-extensions-merge.txt (in Plugins\DynastyExtensions) says in one line whether Dynasty Extensions is ON this session, and why not if it is OFF.
+- When Dynasty Extensions can't run in a session, the Spring Game, Weekly Strategy and Press Box rows read "Off this session", and the Weekly Strategy View button and "Take this game" are not shown, so nothing can be pressed that needs the missing logic.
+Changed:
+- The plugin is now required, and it is new: replace your old Plugins folder (keep a copy of your dynasty-extensions.ini first).
+- With Playoff Customizer 1.1.0 (no patch for it) Dynasty Extensions stays off and says so; your dynasty is not affected.
+Unchanged: Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.3.0. The Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and AIO dynasty mod patches carry the same content as the 0.3.0 patches.
+
 ## 0.3.0
 New:
 - Practice drills in your dynasty: on Weekly Strategy's Team Profile, START TRAINING opens Road to Glory's practice drill menu (Team drills and Skill drills for your drill player's position). The drill player is your first filled focus player; X on a filled focus card picks another one (his drills load the next time you open Weekly Strategy). He is the one on the field in the drill; your real depth chart is never changed.
@@ -96,7 +108,7 @@ Updating from 0.1.7, 0.1.6 or 0.1.4:
 
 ## 0.1.7
 Fixed:
-- Spring game attendance is now really half the stadium (12,483 at JMU). In 0.1.6 the setting had no effect: the game worked the crowd out again at kickoff. The game seats fans sideline first, so the empty seats show mostly in the end zones and the sideline stands still look full. I'll be chatting with Ace about having the spring game type supported in his Dynamic Gameday Atmosphere mod, which would show a properly thinner crowd.
+- Spring game attendance is now really half the stadium (12,483 at JMU). In 0.1.6 the setting had no effect: the game worked the crowd out again at kickoff. The game seats fans sideline first, so the empty seats show mostly in the end zones and the sideline stands still look full.
 - Press Box: with two or more game cards on your hub, each card now opens its own game. After you had watched a game, another card could open the wrong one.
 - Press Box: watching a game no longer fails to start when another plugin in your game also changes the controller setup. If one is in the way, `anygame.log` names it.
 
