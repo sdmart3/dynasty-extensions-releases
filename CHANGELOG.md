@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.6.0
+New:
+- Dynasty Extensions fits other dynasty mods while the game runs, without a ready-made fit for each version. A new version of Playoff Customizer, Dynasty Customizer or the AIO dynasty mod no longer has to wait for a Dynasty Extensions update. If a file can't be fitted safely, Dynasty Extensions turns itself Off for that session and `dynasty-extensions-merge.txt` says why.
+Changed:
+- The plugin's helper (`demerge.dll`) and its data file (`de-expr.pack`) are new. The data file no longer lists individual versions of other mods.
+- For the game alone and DRI+ 3.0 the merged result is the same as in 0.5.x.
+Unchanged: the main mod is the same file as 0.5.0 and 0.5.1; Instant Replay while you watch a CPU game, Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.5.1.
+Files: new `demerge.dll` and `de-expr.pack`. The plugin, `anygame.dll`, `wsdata.dll`, `dynasty-extensions.ini` and the main mod are 0.5.1's.
+Checked in game: the game alone (same result as 0.5.0), DRI+ 3.0, Playoff Customizer 1.3.0 (preseason and week 9 into 10), Dynasty Customizer 1.1.0, the AIO dynasty mod 1.4.1 and the ZEO + Playoff Customizer + DRI combined download.
+
+## 0.5.1
+New:
+- Press Box: Instant Replay in the pause menu while you watch a CPU game (after the whistle or before the snap, never during a play), the same as in a game you play. Your own games are not changed. New setting `watch_replay` in `[Press Box]` (1 = on, the default; 0 = off); an older ini gets it from the plugin.
+Changed:
+- The separate Press Box mod is retired: Dynasty Extensions has everything it had. See INSTALL.md, "Coming from the separate Press Box mod".
+Unchanged: the main mod is the same file as 0.5.0; Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.5.0.
+Files: a new `DynastyExtensionsPlugin.dll`, `anygame.dll` and `dynasty-extensions.ini`. `demerge.dll`, `de-expr.pack`, `wsdata.dll` and the main mod are 0.5.0's.
+
 ## 0.5.0
 New:
 - No patch files. The game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and the AIO dynasty mod 1.4.1 all work with the one download. The Dynasty Extensions rows, screens and logic are added while the game runs, on top of whatever the game or another mod loaded.

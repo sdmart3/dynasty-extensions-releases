@@ -4,14 +4,18 @@
 
 Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks (the spring game).
 
-**New in 0.5.0: no patch files.** Before, if you ran Playoff Customizer, Dynasty Customizer or the AIO dynasty mod, you had to find and import a second file made for your exact version. Now one download covers the game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and the AIO dynasty mod 1.4.1 (the table below lists what was checked). Import the mod, copy the Plugins folder, done.
+**New in 0.6.0: it keeps working when the other mods update.** Dynasty Extensions now fits itself to the dynasty files of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod while the game runs, instead of waiting for a Dynasty Extensions update for each new version. If a version is too different, it turns itself Off safely and says why (see "Is it on?"). Nothing to relearn: same mod file, and updating is just replacing the Plugins folder.
+
+**0.5.1: Instant Replay while you watch a CPU game.** Press Box now offers Instant Replay in the pause menu of a game you watch, the same as in a game you play. With this, the separate Press Box mod is retired.
+
+**No patch files (since 0.5.0).** Before, if you ran Playoff Customizer, Dynasty Customizer or the AIO dynasty mod, you had to find and import a second file made for your exact version. Now one download covers the game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and the AIO dynasty mod 1.4.1 (the table below lists what was checked). Import the mod, copy the Plugins folder, done.
 
 ## Install in 3 steps
 
 Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip. Back up your dynasty save before you try it.
 
 1. Close the game and the Mod Manager. Copy the `Plugins` folder from `Manual install` into your Mod Manager folder (next to `MMCModManager.exe`). **The plugin is required**: without it nothing of Dynasty Extensions runs.
-2. Open the Mod Manager, import `Dynasty-Extensions-0.5.0.fbmod` and turn it on. Put it anywhere in the list.
+2. Open the Mod Manager, import `Dynasty-Extensions-0.5.0.fbmod` (the file name says 0.5.0 on purpose: it is the same mod file as before) and turn it on. Put it anywhere in the list.
 3. Launch the game from the Mod Manager and load your dynasty. About 30 seconds after the game starts the plugin's helper is in. (The Mod Manager loads plugins only when it starts. If it was already open when you copied the `Plugins` folder, close it and start it again first.)
 
 Then open `Plugins\DynastyExtensions\dynasty-extensions-merge.txt`: its first line says `Dynasty Extensions is ON`. If it says `ready`, go back to the main menu and load the dynasty again. If it says `OFF this session because ...`, see "Is it on?" below.
@@ -28,18 +32,18 @@ No patch for any of them. "In game" means it was run in a dynasty and checked. "
 | DRI+ 3.0 | works | in game |
 | Playoff Customizer 1.3.0 | works (preseason, and week 9 into 10; the bracket still shows) | in game |
 | Dynasty Customizer 1.1.0 | works | in game (preseason) |
-| AIO dynasty mod 1.4.1 | works | in game (preseason) |
+| AIO dynasty mod 1.4.1 | works (in a dynasty you already had) | in game (preseason) |
 | ZEO 1.0.1 + Playoff Customizer 1.3.0 + DRI 3.0 (the combined download) | works (DRI+ starts as normal) | in game (mid-season, one Advance) |
 | Conference Customizer, or an older version of the mods above | not supported: it may read Off | not tested |
 | Any other mod that changes the dynasty logic | not supported: Off | by design |
 
 When it is Off, the three League Settings rows read **Off this session**, nothing that needs Dynasty Extensions can be pressed, and your dynasty plays and saves normally.
 
-Only the current versions above are supported. DRI+ older than 3.0 is not covered.
+Only the versions above are supported. They are the ones that were run in a game. A newer version of Playoff Customizer, Dynasty Customizer or the AIO dynasty mod may work too, now without a new Dynasty Extensions download, but it has not been checked: if it does not fit, Dynasty Extensions turns itself Off and says why. DRI+ older than 3.0 is not covered.
 
 ## Only want Press Box?
 
-Dynasty Extensions has Press Box in it, and it needs no patch files. Install Dynasty Extensions as above, then open League Settings in each dynasty and set Spring Game to Off and Weekly Strategy to Off. Do it in the preseason: during the season these two rows are locked. You only do this once per dynasty. Using the separate Press Box 0.7.5? You can stay on it for now: its instant-replay fix comes to Dynasty Extensions in the next update. Don't run both. To switch, see INSTALL.md, "Coming from the separate Press Box mod".
+Dynasty Extensions has Press Box in it, and it needs no patch files. Install Dynasty Extensions as above, then open League Settings in each dynasty and set Spring Game to Off and Weekly Strategy to Off. Do it in the preseason: during the season these two rows are locked. You only do this once per dynasty. Using the separate Press Box mod? It is retired: Dynasty Extensions now has its instant-replay fix too. Don't run both. To switch, see INSTALL.md, "Coming from the separate Press Box mod".
 
 ## What it does
 
@@ -91,9 +95,9 @@ If you loaded the dynasty before the helper was in (about 30 seconds after the g
 
 ## Older mods and Conference Customizer
 
-Conference Customizer and older versions of Playoff Customizer (1.2.1, 1.2.0, 1.1.0, 1.0.2), Dynasty Customizer and the AIO dynasty mod (1.4.0, 1.3.1) are not supported in 0.5.0. If you use one, Dynasty Extensions may turn itself off while you play: the three League Settings rows read **Off this session**, there is no spring game, no Weekly Strategy View button and no "Take this game". That is on purpose, not a bug. Your dynasty is not harmed and the other mod works exactly as it did. The merge file says why.
+Conference Customizer and older versions of Playoff Customizer (1.2.1, 1.2.0, 1.1.0, 1.0.2), Dynasty Customizer and the AIO dynasty mod (1.4.0, 1.3.1) are not supported. If you use one, Dynasty Extensions may turn itself off while you play: the three League Settings rows read **Off this session**, there is no spring game, no Weekly Strategy View button and no "Take this game". That is on purpose, not a bug. Your dynasty is not harmed and the other mod works exactly as it did. The merge file says why.
 
-To get Dynasty Extensions working, update that mod to the current version in the table above.
+To get Dynasty Extensions working, update that mod to a version in the table above.
 
 ## Practice drills
 
@@ -179,14 +183,29 @@ Good to know:
 
 Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.5.0.fbmod`: the mod. Import it in the Mod Manager.
-- `Manual install\Plugins\`: the plugin (**required**; new in 0.5.0, so replace your old one). Copy the `Plugins` folder into your Mod Manager folder.
+- `Dynasty-Extensions-0.5.0.fbmod`: the mod. Import it in the Mod Manager. (It is the same file as in 0.5.0, so the name stays. If you already imported it, you don't import it again when you update from 0.5.0.)
+- `Manual install\Plugins\`: the plugin (**required**; replace your old one). Copy the `Plugins` folder into your Mod Manager folder.
 - `INSTALL.md`: the steps, including updating and removing.
 - `CHANGELOG.md`: what changed in each version.
 
-There are no patch files in 0.5.0.
+There are no patch files in 0.6.0.
 
-## What's new in 0.5.0
+## What's new in 0.6.0
+
+- **Dynasty Extensions fits other dynasty mods while the game runs, with no per-version data.** In 0.5.0 and 0.5.1 it carried a ready-made fit for each known version of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod. Now it works out the fit from the files the game loaded, so a new version of those mods does not need a new Dynasty Extensions first. If it can't fit a file safely it turns itself Off for that session (safe, the merge file says why).
+- **Same mod file, same settings.** `Dynasty-Extensions-0.5.0.fbmod` is unchanged, so you don't import it again. Only the files in the Plugins folder changed (the helper `demerge.dll` and its data file `de-expr.pack`).
+- **Checked in game** on the game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0, the AIO dynasty mod 1.4.1, and ZEO 1.0.1 + Playoff Customizer 1.3.0 + DRI 3.0.
+- **Updating from 0.5.0 or 0.5.1:** copy the new `Plugins` folder over the old one. Keep your ini.
+- Everything else is the same as 0.5.1 (Instant Replay while you watch a CPU game, and the separate Press Box mod being retired).
+
+## What came in 0.5.1
+
+- **Instant Replay while you watch a CPU game.** Leave the controller in the middle, press Start after the whistle or before the snap, and the pause menu offers Instant Replay. B goes back to the pause menu and Resume keeps watching. During a play there is no Instant Replay, the same as the game's own rule. Your own games are not changed. It is on by default; `watch_replay` in `[Press Box]` (1 = on, 0 = off) turns it off. An older ini gets the setting from the plugin.
+- **The separate Press Box mod is retired.** Dynasty Extensions has everything it had. See INSTALL.md, "Coming from the separate Press Box mod".
+- **Updating from 0.5.0:** copy the new `Plugins` folder over the old one. The mod file is the same, so you don't import it again.
+- Everything else is the same as 0.5.0.
+
+## What came in 0.5.0
 
 - **No patch files.** The game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and the AIO dynasty mod 1.4.1 all work with this one download. The Dynasty Extensions rows, screens and logic are added while the game runs, on top of whatever the game or another mod loaded. You don't pick a patch for your version.
 - **League Settings rows are added while the game runs.** Spring Game, Weekly Strategy and Press Box appear on the League Settings screen of the game or of the mod you use. That mod's own rows (for example Playoff Customizer's bracket and sites rows) stay where they were.
@@ -195,9 +214,9 @@ There are no patch files in 0.5.0.
 - **Dynasty Extensions' requests stay out of the dynasty hub's card list** on every base (they used to show as cards on some setups).
 - **The main mod no longer replaces League Settings**, so it can sit anywhere in your Mod Manager list.
 - **The plugin is new:** replace your old `Plugins` folder (keep a copy of your `dynasty-extensions.ini` first).
-- **Only want Press Box?** Set Spring Game and Weekly Strategy to Off in League Settings (once per dynasty, in the preseason). The separate Press Box 0.7.5's instant-replay fix isn't in this version yet: it comes in the next update.
+- **Only want Press Box?** Set Spring Game and Weekly Strategy to Off in League Settings (once per dynasty, in the preseason).
 - **Not supported any more:** Conference Customizer and older versions of the mods above. Dynasty Extensions may read Off with them (safe).
-- **Everything else is the same as 0.4.0:** Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as before.
+- **Everything else was the same as 0.4.0:** Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as before.
 
 ## What came in 0.4.0
 
