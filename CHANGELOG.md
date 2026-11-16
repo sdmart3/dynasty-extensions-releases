@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.5.0
+New:
+- No patch files. The game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and the AIO dynasty mod 1.4.1 all work with the one download. The Dynasty Extensions rows, screens and logic are added while the game runs, on top of whatever the game or another mod loaded.
+- League Settings rows (Spring Game, Weekly Strategy, Press Box) are added while the game runs. Other mods' own rows, such as Playoff Customizer's bracket and sites rows, stay where they are.
+- The Weekly Strategy View button and the Press Box popup work on Playoff Customizer, Dynasty Customizer and the AIO dynasty mod with no extra file.
+- Fixed: two "Take this game" picks in one week. Each Play Game card now opens its own game (before, the second card could open the first game's teams).
+- Dynasty Extensions' requests stay out of the dynasty hub's card list on every base (they used to show as cards on some setups).
+Changed:
+- The Compatibility patches folder is gone. If you have a "Dynasty Extensions x ..." patch, remove it.
+- The main mod no longer replaces League Settings, so it can sit anywhere in your Mod Manager list.
+- The plugin is new: replace your Plugins folder (keep a copy of your dynasty-extensions.ini first).
+- Conference Customizer and older versions of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod are not supported. Dynasty Extensions may read Off with them (safe, and the merge file says why).
+- Only want Press Box? Set Spring Game and Weekly Strategy to Off in League Settings (once per dynasty).
+Unchanged: Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.4.0.
+
 ## 0.4.0
 New:
 - Dynasty Extensions works with other mods that change the dynasty logic without a copy of that logic in its own file. A helper in the plugin adds it while the game runs, each time you load a dynasty, on top of whatever the game or another mod loaded.
