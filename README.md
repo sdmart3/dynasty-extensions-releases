@@ -4,7 +4,9 @@
 
 Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks (the spring game).
 
-**New in 0.6.0: it keeps working when the other mods update.** Dynasty Extensions now fits itself to the dynasty files of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod while the game runs, instead of waiting for a Dynasty Extensions update for each new version. If a version is too different, it turns itself Off safely and says why (see "Is it on?"). Nothing to relearn: same mod file, and updating is just replacing the Plugins folder.
+**New in 0.6.1: spring game kits.** In the spring game your second string now wears your school's away kit and your starters your home kit, so it looks like an intrasquad scrimmage. Nothing to set up: copy the new Plugins folder and keep your ini (see "What's new in 0.6.1").
+
+**0.6.0: it keeps working when the other mods update.** Dynasty Extensions now fits itself to the dynasty files of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod while the game runs, instead of waiting for a Dynasty Extensions update for each new version. If a version is too different, it turns itself Off safely and says why (see "Is it on?"). Nothing to relearn: same mod file, and updating is just replacing the Plugins folder.
 
 **0.5.1: Instant Replay while you watch a CPU game.** Press Box now offers Instant Replay in the pause menu of a game you watch, the same as in a game you play. With this, the separate Press Box mod is retired.
 
@@ -57,6 +59,9 @@ Dynasty Extensions has Press Box in it, and it needs no patch files. Install Dyn
   Your players also get four weeks' worth of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
   - **Spring Practice** (beta, off unless you pick it). Four extra preseason weeks instead of one: three practice weeks, each with a drill game
     of five graded situations, then the normal spring game. The grades raise or lower the next week's practice XP. See "Spring Practice" below.
+  - **Spring game kits** (new in 0.6.1). In the spring game your second string (the stand-in team) wears your school's away kit and your starters wear your
+    home kit, so it looks like an intrasquad scrimmage. The scorebug still shows the stand-in's name and logo (for example DUKES). Every other game is
+    unchanged. To turn it off, set `spring_kits = 0` in the `[Weekly Strategy]` part of `Plugins\DynastyExtensions\dynasty-extensions.ini`.
 ## Turning things on and off
 
 Open **League Settings** in your dynasty (the screen is titled Dynasty Settings). Three rows sit right after Quarter Length, under Clock Management:
@@ -80,7 +85,7 @@ Spring Game choices:
   Preseason Week 0. If you change it once the extra weeks have started, this spring finishes the way it started and your new choice starts next year.
 - Turning one off leaves the other two alone.
 
-More detail settings (watch pause, the controller screen, which Weekly Strategy panels fill in, the Call Sheet file, the scorebug text) are in
+More detail settings (watch pause, the controller screen, which Weekly Strategy panels fill in, the Call Sheet file, the scorebug text, the spring game kits) are in
 `Plugins\DynastyExtensions\dynasty-extensions.ini`. You don't need to touch it.
 
 
@@ -188,9 +193,17 @@ Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip.
 - `INSTALL.md`: the steps, including updating and removing.
 - `CHANGELOG.md`: what changed in each version.
 
-There are no patch files in 0.6.0.
+There are no patch files in 0.6.1.
 
-## What's new in 0.6.0
+## What's new in 0.6.1
+
+- **Spring game kits.** In the spring game your second string (the stand-in team) wears your school's away kit and your starters wear your home kit, so it looks like an intrasquad scrimmage. Before, the stand-in played in its own FCS kit. The scorebug still shows the stand-in's name and logo (for example DUKES): only the uniforms change. Every other game is unchanged.
+- **On by default.** `spring_kits = 1` in the `[Weekly Strategy]` part of `dynasty-extensions.ini`; set it to `0` to turn it off. If you keep your old ini when you update, it has no `spring_kits` line, so the plugin uses the default: on.
+- In a league where a mod replaced the five stock FCS teams, the stand-in can keep its own kit (nothing breaks).
+- **Updating from 0.5.0, 0.5.1 or 0.6.0:** copy the new `Plugins` folder over the old one. Keep your ini. The mod file is the same, so you don't import it again.
+- Everything else is the same as 0.6.0. Only `wsdata.dll`, the plugin and the default `dynasty-extensions.ini` changed.
+
+## What came in 0.6.0
 
 - **Dynasty Extensions fits other dynasty mods while the game runs, with no per-version data.** In 0.5.0 and 0.5.1 it carried a ready-made fit for each known version of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod. Now it works out the fit from the files the game loaded, so a new version of those mods does not need a new Dynasty Extensions first. If it can't fit a file safely it turns itself Off for that session (safe, the merge file says why).
 - **Same mod file, same settings.** `Dynasty-Extensions-0.5.0.fbmod` is unchanged, so you don't import it again. Only the files in the Plugins folder changed (the helper `demerge.dll` and its data file `de-expr.pack`).
@@ -244,7 +257,7 @@ There are no patch files in 0.6.0.
 
 - With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod, all three parts work, Spring Game and Spring Practice included.
   The three rows sit on that mod's own League Settings screen, right after Quarter Length; its own rows stay where they were.
-- The spring game's second string plays on a stand-in team (one of your real FCS schools if a mod replaced the five stock FCS teams), so it carries your school's nickname (for example the Dukes against James Madison) and you can tell the two sides apart. It's put back exactly as it was at the next Advance. The post-game screen shows a 1-0 / 0-1 record, but it doesn't stick: you start week 0 at 0-0.
+- The spring game's second string plays on a stand-in team (one of your real FCS schools if a mod replaced the five stock FCS teams), so it carries your school's nickname (for example the Dukes against James Madison) and you can tell the two sides apart. From 0.6.1 it wears your school's away kit (`spring_kits`, see "What's new in 0.6.1"). It's put back exactly as it was at the next Advance. The post-game screen shows a 1-0 / 0-1 record, but it doesn't stick: you start week 0 at 0-0.
 - Don't use this together with the separate Press Box, Weekly Strategy or Preseason Weeks mods. This replaces them.
 - Another mod that also ships `common/ui/adapterenum_cfm/scriptpod.ast` (none found among 501 mods) would take over from Dynasty Extensions; only one of the two loads.
 - Back up your dynasty save before you try it.
@@ -255,4 +268,4 @@ Update to 0.2.3 or later and Advance once; after that it is safe to remove. If a
 
 ## Checksums (sha256)
 
-The zip's checksum is on the release page (`Dynasty-Extensions-0.5.0.sha256.txt`). The mod file inside the zip, `Dynasty-Extensions-0.5.0.fbmod`, is listed in `Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.
+The zip's checksum is on the release page (`Dynasty-Extensions-0.6.1.sha256.txt`). The mod file inside the zip, `Dynasty-Extensions-0.5.0.fbmod`, is listed in `Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.

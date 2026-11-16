@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.1
+New:
+- Spring game kits: in the spring game your second string (the stand-in team) wears your school's away kit and your starters your home kit, so it looks like an intrasquad scrimmage. The scorebug still shows the stand-in's name and logo. Every other game is unchanged. New setting `spring_kits` in `[Weekly Strategy]` (1 = on, the default; 0 = off); an older ini gets it from the plugin.
+Unchanged: the main mod is the same file as 0.5.0, 0.5.1 and 0.6.0; the runtime merge, Instant Replay while you watch a CPU game, Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.6.0.
+Files: a new `wsdata.dll`, `DynastyExtensionsPlugin.dll` and `dynasty-extensions.ini`. `demerge.dll`, `de-expr.pack`, `anygame.dll` and the main mod are 0.6.0's.
+Checked in game: the spring game kits on the game alone (the stand-in in the school's away kit, the user in its home kit).
+
 ## 0.6.0
 New:
 - Dynasty Extensions fits other dynasty mods while the game runs, without a ready-made fit for each version. A new version of Playoff Customizer, Dynasty Customizer or the AIO dynasty mod no longer has to wait for a Dynasty Extensions update. If a file can't be fitted safely, Dynasty Extensions turns itself Off for that session and `dynasty-extensions-merge.txt` says why.
