@@ -4,7 +4,7 @@
 
 Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks (the spring game).
 
-**New in 0.6.1: spring game kits.** In the spring game your second string now wears your school's away kit and your starters your home kit, so it looks like an intrasquad scrimmage. Nothing to set up: copy the new Plugins folder and keep your ini (see "What's new in 0.6.1").
+**New in 0.6.4: works on the 2026-11-17 game update.** That update switched off Weekly Strategy, the spring game, the spring game kits and the runtime merge of 0.6.1, and the old mod file no longer fits it. 0.6.4 works on the 2026-11-17 update and keeps working on the 2026-10-29 update. It also brings the spring game kits that work (your second string in your school's white kit, your starters in its dark kit). **Import the new mod file** `Dynasty-Extensions-0.6.4.fbmod` and copy the new Plugins folder (see "What's new in 0.6.4").
 
 **0.6.0: it keeps working when the other mods update.** Dynasty Extensions now fits itself to the dynasty files of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod while the game runs, instead of waiting for a Dynasty Extensions update for each new version. If a version is too different, it turns itself Off safely and says why (see "Is it on?"). Nothing to relearn: same mod file, and updating is just replacing the Plugins folder.
 
@@ -17,7 +17,7 @@ Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks
 Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip. Back up your dynasty save before you try it.
 
 1. Close the game and the Mod Manager. Copy the `Plugins` folder from `Manual install` into your Mod Manager folder (next to `MMCModManager.exe`). **The plugin is required**: without it nothing of Dynasty Extensions runs.
-2. Open the Mod Manager, import `Dynasty-Extensions-0.5.0.fbmod` (the file name says 0.5.0 on purpose: it is the same mod file as before) and turn it on. Put it anywhere in the list.
+2. Open the Mod Manager, import `Dynasty-Extensions-0.6.4.fbmod` and turn it on. Put it anywhere in the list. (Game still at the 2026-10-29 update? Import `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.fbmod` instead.)
 3. Launch the game from the Mod Manager and load your dynasty. About 30 seconds after the game starts the plugin's helper is in. (The Mod Manager loads plugins only when it starts. If it was already open when you copied the `Plugins` folder, close it and start it again first.)
 
 Then open `Plugins\DynastyExtensions\dynasty-extensions-merge.txt`: its first line says `Dynasty Extensions is ON`. If it says `ready`, go back to the main menu and load the dynasty again. If it says `OFF this session because ...`, see "Is it on?" below.
@@ -26,7 +26,7 @@ Updating from 0.4.0 or older: see INSTALL.md. **Remove any "Dynasty Extensions x
 
 ## Which mods work with it
 
-No patch for any of them. "In game" means it was run in a dynasty and checked. "Off" means Dynasty Extensions turns itself off safely and says so.
+No patch for any of them. "In game" means it was run in a dynasty and checked. "Off" means Dynasty Extensions turns itself off safely and says so. The checks below were made on the 2026-10-29 game update. On the 2026-11-17 update the game alone is checked in game; the other mods need their own versions for that update from their authors.
 
 | You also use | Result | Checked |
 |---|---|---|
@@ -59,9 +59,10 @@ Dynasty Extensions has Press Box in it, and it needs no patch files. Install Dyn
   Your players also get four weeks' worth of practice XP before it. Records and stats don't count. Play it from the hub like any other game.
   - **Spring Practice** (beta, off unless you pick it). Four extra preseason weeks instead of one: three practice weeks, each with a drill game
     of five graded situations, then the normal spring game. The grades raise or lower the next week's practice XP. See "Spring Practice" below.
-  - **Spring game kits** (new in 0.6.1). In the spring game your second string (the stand-in team) wears your school's away kit and your starters wear your
-    home kit, so it looks like an intrasquad scrimmage. The scorebug still shows the stand-in's name and logo (for example DUKES). Every other game is
-    unchanged. To turn it off, set `spring_kits = 0` in the `[Weekly Strategy]` part of `Plugins\DynastyExtensions\dynasty-extensions.ini`.
+  - **Spring game kits** (working since 0.6.3). In the spring game your second string (the stand-in team, at home) wears your school's white kit and your
+    starters wear its dark kit, so it looks like an intrasquad scrimmage. The scorebug still shows the stand-in's name and logo (for example DUKES). Every
+    other game is unchanged. The 2026-11-17 and 2026-10-29 title updates; on the 2026-10-13 update the kits stay stock. To turn it off, set `spring_kits = 0` in the
+    `[Weekly Strategy]` part of `Plugins\DynastyExtensions\dynasty-extensions.ini`.
 ## Turning things on and off
 
 Open **League Settings** in your dynasty (the screen is titled Dynasty Settings). Three rows sit right after Quarter Length, under Clock Management:
@@ -188,20 +189,35 @@ Good to know:
 
 Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.5.0.fbmod`: the mod. Import it in the Mod Manager. (It is the same file as in 0.5.0, so the name stays. If you already imported it, you don't import it again when you update from 0.5.0.)
+- `Dynasty-Extensions-0.6.4.fbmod`: the mod, for the 2026-11-17 game update. Import it in the Mod Manager (it replaces `Dynasty-Extensions-0.5.0`: remove that one from the list).
+- `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.fbmod`: the same mod for a game still at the 2026-10-29 update (the file of 0.5.0 to 0.6.1). Import only one of the two.
 - `Manual install\Plugins\`: the plugin (**required**; replace your old one). Copy the `Plugins` folder into your Mod Manager folder.
 - `INSTALL.md`: the steps, including updating and removing.
 - `CHANGELOG.md`: what changed in each version.
 
-There are no patch files in 0.6.1.
+There are no patch files in 0.6.4.
 
-## What's new in 0.6.1
+## What's new in 0.6.4
 
-- **Spring game kits.** In the spring game your second string (the stand-in team) wears your school's away kit and your starters wear your home kit, so it looks like an intrasquad scrimmage. Before, the stand-in played in its own FCS kit. The scorebug still shows the stand-in's name and logo (for example DUKES): only the uniforms change. Every other game is unchanged.
-- **On by default.** `spring_kits = 1` in the `[Weekly Strategy]` part of `dynasty-extensions.ini`; set it to `0` to turn it off. If you keep your old ini when you update, it has no `spring_kits` line, so the plugin uses the default: on.
+- **Works on the 2026-11-17 game update.** The update moved the game code Dynasty Extensions works with. On it, 0.6.1 turns Weekly Strategy, the spring game, the spring game kits and the runtime merge off (safely: they do nothing, the game runs), and its mod file no longer fits the update's game data. 0.6.4 knows the new game build and still knows the 2026-10-29 one, so the same Plugins folder works on both.
+- **A new mod file: `Dynasty-Extensions-0.6.4.fbmod`.** The same screens as the 0.5.0 file, rebuilt for the 2026-11-17 update (one reference to the game's data changed in the update). Import it and remove `Dynasty-Extensions-0.5.0` from the Mod Manager list. If your game is still at the 2026-10-29 update, keep `Dynasty-Extensions-0.5.0.fbmod` (it is in the zip too, in `For the 2026-10-29 game update`).
+- **Spring game kits that work** (the 0.6.3 fix, which was not released on its own). In the spring game your second string (the stand-in, at home) wears your school's white kit and your starters its dark kit, on team select and on the field. The 0.6.1 kit swap did not work on the field. See "What came in 0.6.3".
+- **Updating from 0.6.1 (or 0.5.0, 0.5.1, 0.6.0):** close the Mod Manager and the game, copy the new `Plugins` folder over the old one and keep your ini (the plugin adds the two new kit lines for you). Start the Mod Manager, remove `Dynasty-Extensions-0.5.0` from the list, import `Dynasty-Extensions-0.6.4.fbmod` and turn it on. If you set `spring_kits = 0` yourself, change it back to `1` to get the kits.
+- Everything else is the same as 0.6.1, with the same supported setups. Changed files: the mod file, `wsdata.dll`, `demerge.dll`, `anygame.dll`, the plugin, its `README.txt` and the default `dynasty-extensions.ini`. `de-expr.pack` is the same file (the game's own dynasty logic did not change in the update).
+
+## What came in 0.6.3 (not released on its own; part of 0.6.4)
+
+- **Spring game kits now work.** The kit swap added in 0.6.1 did not work on the field: the stand-in kept its own FCS kit and only your side changed, to your school's dark kit, so the spring game was dark against dark. The 0.6.1 notes said it was checked in game; that check was wrong. In 0.6.3 the stand-in (your second string, at home) wears your school's white kit and your starters its dark kit, on team select and on the field. The scorebug still shows the stand-in's name and logo (for example DUKES): only the uniforms change. Every other game is unchanged.
+- **The 2026-10-29 title update** (from 0.6.4 also the 2026-11-17 update). On the 2026-10-13 update the spring game kits stay stock (the stand-in in its own kit), with nothing to set.
+- **On by default.** `spring_kits = 1` in the `[Weekly Strategy]` part of `dynasty-extensions.ini`; set it to `0` to turn it off. Two new lines under the test switches, `spring_kits_teamrow = 1` and `spring_kits_teamrow_dry = 0`, are part of the kits: leave them as they are.
 - In a league where a mod replaced the five stock FCS teams, the stand-in can keep its own kit (nothing breaks).
-- **Updating from 0.5.0, 0.5.1 or 0.6.0:** copy the new `Plugins` folder over the old one. Keep your ini. The mod file is the same, so you don't import it again.
-- Everything else is the same as 0.6.0. Only `wsdata.dll`, the plugin and the default `dynasty-extensions.ini` changed.
+- Keep your ini when you update: a kept 0.6.1 ini has `spring_kits = 1`, which now works, and the plugin adds the two new lines. An ini from 0.6.0 or older has no kit lines, so the plugin uses the defaults: the kits are on.
+- 0.6.2 was not released.
+
+## What came in 0.6.1
+
+- **Spring game kits (did not work; fixed in 0.6.3, released in 0.6.4).** Meant to dress your second string in your school's away kit and your starters in its home kit in the spring game. On the field only your side changed.
+- Everything else was the same as 0.6.0.
 
 ## What came in 0.6.0
 
@@ -257,7 +273,7 @@ There are no patch files in 0.6.1.
 
 - With Playoff Customizer, Dynasty Customizer or the AIO dynasty mod, all three parts work, Spring Game and Spring Practice included.
   The three rows sit on that mod's own League Settings screen, right after Quarter Length; its own rows stay where they were.
-- The spring game's second string plays on a stand-in team (one of your real FCS schools if a mod replaced the five stock FCS teams), so it carries your school's nickname (for example the Dukes against James Madison) and you can tell the two sides apart. From 0.6.1 it wears your school's away kit (`spring_kits`, see "What's new in 0.6.1"). It's put back exactly as it was at the next Advance. The post-game screen shows a 1-0 / 0-1 record, but it doesn't stick: you start week 0 at 0-0.
+- The spring game's second string plays on a stand-in team (one of your real FCS schools if a mod replaced the five stock FCS teams), so it carries your school's nickname (for example the Dukes against James Madison) and you can tell the two sides apart. From 0.6.3 it wears your school's white kit (`spring_kits`, see "What's new in 0.6.3"). It's put back exactly as it was at the next Advance. The post-game screen shows a 1-0 / 0-1 record, but it doesn't stick: you start week 0 at 0-0.
 - Don't use this together with the separate Press Box, Weekly Strategy or Preseason Weeks mods. This replaces them.
 - Another mod that also ships `common/ui/adapterenum_cfm/scriptpod.ast` (none found among 501 mods) would take over from Dynasty Extensions; only one of the two loads.
 - Back up your dynasty save before you try it.
@@ -268,4 +284,4 @@ Update to 0.2.3 or later and Advance once; after that it is safe to remove. If a
 
 ## Checksums (sha256)
 
-The zip's checksum is on the release page (`Dynasty-Extensions-0.6.1.sha256.txt`). The mod file inside the zip, `Dynasty-Extensions-0.5.0.fbmod`, is listed in `Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.
+The zip's checksum is on the release page (`Dynasty-Extensions-0.6.4.sha256.txt`). The mod files inside the zip are listed in `Dynasty-Extensions-0.6.4.fbmod.sha256.txt` and `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.

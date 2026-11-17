@@ -1,11 +1,28 @@
 # Changelog
 
+## 0.6.4
+New:
+- Works on the 2026-11-17 game update, and keeps working on the 2026-10-29 update. On the 2026-11-17 update 0.6.1 turns Weekly Strategy, the spring game, the spring game kits and the runtime merge off; 0.6.4 knows that game build.
+- A new mod file, `Dynasty-Extensions-0.6.4.fbmod`, for the 2026-11-17 update: the same screens as the 0.5.0 file, rebuilt for the update's game data. Remove `Dynasty-Extensions-0.5.0` from the Mod Manager and import it. A game still at the 2026-10-29 update keeps the 0.5.0 file (in the zip, in `For the 2026-10-29 game update`).
+- The spring game kit fix of 0.6.3 (below), which was not released on its own. The kits work on the 2026-11-17 and 2026-10-29 updates.
+Unchanged: the runtime merge, Instant Replay while you watch a CPU game, Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.6.1, with the same supported setups. Your ini is kept.
+Files: a new mod file, `wsdata.dll`, `demerge.dll`, `anygame.dll`, `DynastyExtensionsPlugin.dll`, its `README.txt` and `dynasty-extensions.ini` (text only: which game updates). `de-expr.pack` is 0.6.1's.
+
+## 0.6.3 (not released on its own; part of 0.6.4)
+Fixed:
+- Spring game kits work. The kit swap added in 0.6.1 did not work on the field: the stand-in kept its own FCS kit and only your side changed, to your school's dark kit. Now the stand-in (your second string, at home) wears your school's white kit and your starters its dark kit, on team select and on the field. The scorebug keeps the stand-in's name and logo. Every other game is unchanged.
+- The 2026-10-29 title update (from 0.6.4 also the 2026-11-17 update). On the 2026-10-13 update the spring game kits stay stock.
+New settings: `spring_kits_teamrow` (1) and `spring_kits_teamrow_dry` (0) under the test switches in `[Weekly Strategy]`; they are part of the kits, leave them as they are. An older ini gets them from the plugin. `spring_kits = 1` is the default, as in 0.6.1; a `spring_kits` line already in your ini is kept.
+Unchanged: the main mod is the same file as 0.5.0 to 0.6.1; the runtime merge, Instant Replay while you watch a CPU game, Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.6.1.
+Files: a new `wsdata.dll`, `DynastyExtensionsPlugin.dll` and `dynasty-extensions.ini`. `demerge.dll`, `de-expr.pack`, `anygame.dll` and the main mod are 0.6.1's.
+0.6.2 was not released.
+
 ## 0.6.1
 New:
 - Spring game kits: in the spring game your second string (the stand-in team) wears your school's away kit and your starters your home kit, so it looks like an intrasquad scrimmage. The scorebug still shows the stand-in's name and logo. Every other game is unchanged. New setting `spring_kits` in `[Weekly Strategy]` (1 = on, the default; 0 = off); an older ini gets it from the plugin.
 Unchanged: the main mod is the same file as 0.5.0, 0.5.1 and 0.6.0; the runtime merge, Instant Replay while you watch a CPU game, Spring Game, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.6.0.
 Files: a new `wsdata.dll`, `DynastyExtensionsPlugin.dll` and `dynasty-extensions.ini`. `demerge.dll`, `de-expr.pack`, `anygame.dll` and the main mod are 0.6.0's.
-Checked in game: the spring game kits on the game alone (the stand-in in the school's away kit, the user in its home kit).
+Checked in game: the spring game kits on the game alone (the stand-in in the school's away kit, the user in its home kit). Correction (0.6.3): this check was wrong; the kits did not work on the field until 0.6.3.
 
 ## 0.6.0
 New:
