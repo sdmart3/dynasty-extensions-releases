@@ -4,7 +4,9 @@
 
 Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks (the spring game).
 
-**New in 0.6.4: works on the 2026-11-17 game update.** That update switched off Weekly Strategy, the spring game, the spring game kits and the runtime merge of 0.6.1, and the old mod file no longer fits it. 0.6.4 works on the 2026-11-17 update and keeps working on the 2026-10-29 update. It also brings the spring game kits that work (your second string in your school's white kit, your starters in its dark kit). **Import the new mod file** `Dynasty-Extensions-0.6.4.fbmod` and copy the new Plugins folder (see "What's new in 0.6.4").
+**New in 0.6.5: loads sooner after the game starts.** The plugin now loads Dynasty Extensions about 10 seconds after the game starts instead of about 40, so it finds room for its hooks next to the game's code. Copy the new Plugins folder and keep your ini: an existing `settle_sec = 30` is now read as 0; set another number to keep a wait. The mod file is the same `Dynasty-Extensions-0.6.4.fbmod`: if you have it, you don't import it again (see "What's new in 0.6.5").
+
+**0.6.4: works on the 2026-11-17 game update.** That update switched off Weekly Strategy, the spring game, the spring game kits and the runtime merge of 0.6.1, and the old mod file no longer fits it. 0.6.4 works on the 2026-11-17 update and keeps working on the 2026-10-29 update. It also brings the spring game kits that work (your second string in your school's white kit, your starters in its dark kit). **Import the new mod file** `Dynasty-Extensions-0.6.4.fbmod` and copy the new Plugins folder (see "What came in 0.6.4").
 
 **0.6.0: it keeps working when the other mods update.** Dynasty Extensions now fits itself to the dynasty files of Playoff Customizer, Dynasty Customizer and the AIO dynasty mod while the game runs, instead of waiting for a Dynasty Extensions update for each new version. If a version is too different, it turns itself Off safely and says why (see "Is it on?"). Nothing to relearn: same mod file, and updating is just replacing the Plugins folder.
 
@@ -18,7 +20,7 @@ Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip. 
 
 1. Close the game and the Mod Manager. Copy the `Plugins` folder from `Manual install` into your Mod Manager folder (next to `MMCModManager.exe`). **The plugin is required**: without it nothing of Dynasty Extensions runs.
 2. Open the Mod Manager, import `Dynasty-Extensions-0.6.4.fbmod` and turn it on. Put it anywhere in the list. (Game still at the 2026-10-29 update? Import `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.fbmod` instead.)
-3. Launch the game from the Mod Manager and load your dynasty. About 30 seconds after the game starts the plugin's helper is in. (The Mod Manager loads plugins only when it starts. If it was already open when you copied the `Plugins` folder, close it and start it again first.)
+3. Launch the game from the Mod Manager and load your dynasty. About 10 seconds after the game starts the plugin's helper is in. (The Mod Manager loads plugins only when it starts. If it was already open when you copied the `Plugins` folder, close it and start it again first.)
 
 Then open `Plugins\DynastyExtensions\dynasty-extensions-merge.txt`: its first line says `Dynasty Extensions is ON`. If it says `ready`, go back to the main menu and load the dynasty again. If it says `OFF this session because ...`, see "Is it on?" below.
 
@@ -26,7 +28,15 @@ Updating from 0.4.0 or older: see INSTALL.md. **Remove any "Dynasty Extensions x
 
 ## Which mods work with it
 
-No patch for any of them. "In game" means it was run in a dynasty and checked. "Off" means Dynasty Extensions turns itself off safely and says so. The checks below were made on the 2026-10-29 game update. On the 2026-11-17 update the game alone is checked in game; the other mods need their own versions for that update from their authors.
+No patch for any of them. "In game" means it was run in a dynasty and checked. "Off" means Dynasty Extensions turns itself off safely and says so. The checks below were made on the 2026-10-29 game update. On the 2026-11-17 update (checked with the game files Steam installed on 2026-11-18): the game alone, Call Sheet 0.15.2, the AIO dynasty mod 1.5.0 and DRI+ 3.0's November 17 release, in game; the other mods need their own versions for that update from their authors.
+
+| You also use (2026-11-17 update) | Result | Checked |
+|---|---|---|
+| Nothing (the game alone) | works | in game (one Advance) |
+| AIO dynasty mod 1.5.0 | works (in a dynasty you already had) | in game (preseason, one Advance) |
+| DRI+ 3.0, November 17 release | works | in game (week 0 into week 1). DRI+'s November 17 release itself does not start on the game files Steam installed on 2026-11-18 until DRI+ is updated for them; that is DRI+'s own check of the game file, not Dynasty Extensions. |
+
+On the 2026-10-29 update:
 
 | You also use | Result | Checked |
 |---|---|---|
@@ -96,7 +106,7 @@ Open `Plugins\DynastyExtensions\dynasty-extensions-merge.txt` after you load a d
 
 When it is OFF, nothing of Dynasty Extensions runs, and nothing that needs it can be pressed: the Spring Game, Weekly Strategy and Press Box rows in League Settings are greyed and read **Off this session**, Scores / Schedules shows the game's own menu (no "Take this game"), and the dynasty hub has no Weekly Strategy View button. Your dynasty is not harmed: you can play, advance and save, and your settings are kept for the next time it is ON.
 
-If you loaded the dynasty before the helper was in (about 30 seconds after the game starts), the file still says "ready": go back to the main menu and load the dynasty again.
+If you loaded the dynasty before the helper was in (about 10 seconds after the game starts), the file still says "ready": go back to the main menu and load the dynasty again.
 
 
 ## Older mods and Conference Customizer
@@ -189,15 +199,22 @@ Good to know:
 
 Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip.
 
-- `Dynasty-Extensions-0.6.4.fbmod`: the mod, for the 2026-11-17 game update. Import it in the Mod Manager (it replaces `Dynasty-Extensions-0.5.0`: remove that one from the list).
+- `Dynasty-Extensions-0.6.4.fbmod`: the mod, for the 2026-11-17 game update (the same file as in 0.6.4: if you imported it for 0.6.4, you don't import it again). Import it in the Mod Manager (it replaces `Dynasty-Extensions-0.5.0`: remove that one from the list).
 - `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.fbmod`: the same mod for a game still at the 2026-10-29 update (the file of 0.5.0 to 0.6.1). Import only one of the two.
 - `Manual install\Plugins\`: the plugin (**required**; replace your old one). Copy the `Plugins` folder into your Mod Manager folder.
 - `INSTALL.md`: the steps, including updating and removing.
 - `CHANGELOG.md`: what changed in each version.
 
-There are no patch files in 0.6.4.
+There are no patch files in 0.6.5.
 
-## What's new in 0.6.4
+## What's new in 0.6.5
+
+- **Loads sooner after the game starts.** The plugin used to wait 30 seconds after the game appeared before it loaded Dynasty Extensions. By then the game has often used up the room next to its own code that Dynasty Extensions needs for its hooks. Now it loads as soon as the game has started (about 10 seconds in), while that room is still free.
+- **Keep your ini.** Every ini from before 0.6.5 has `settle_sec = 30`, the old default. It is now read as 0, and `plugin.log` says so. To keep a wait, set another number, for example `settle_sec = 31`.
+- **Updating from 0.6.4:** close the Mod Manager and the game and copy the new `Plugins` folder over the old one. The mod file is the same `Dynasty-Extensions-0.6.4.fbmod`, so you don't import it again. Coming from 0.6.1 or older: see "What came in 0.6.4" and INSTALL.md.
+- Everything else is the same as 0.6.4, with the same supported setups. Changed files: the plugin, its `README.txt` and the default `dynasty-extensions.ini`. The mod files, `wsdata.dll`, `demerge.dll`, `anygame.dll` and `de-expr.pack` are 0.6.4's.
+
+## What came in 0.6.4
 
 - **Works on the 2026-11-17 game update.** The update moved the game code Dynasty Extensions works with. On it, 0.6.1 turns Weekly Strategy, the spring game, the spring game kits and the runtime merge off (safely: they do nothing, the game runs), and its mod file no longer fits the update's game data. 0.6.4 knows the new game build and still knows the 2026-10-29 one, so the same Plugins folder works on both.
 - **A new mod file: `Dynasty-Extensions-0.6.4.fbmod`.** The same screens as the 0.5.0 file, rebuilt for the 2026-11-17 update (one reference to the game's data changed in the update). Import it and remove `Dynasty-Extensions-0.5.0` from the Mod Manager list. If your game is still at the 2026-10-29 update, keep `Dynasty-Extensions-0.5.0.fbmod` (it is in the zip too, in `For the 2026-10-29 game update`).
@@ -284,4 +301,4 @@ Update to 0.2.3 or later and Advance once; after that it is safe to remove. If a
 
 ## Checksums (sha256)
 
-The zip's checksum is on the release page (`Dynasty-Extensions-0.6.4.sha256.txt`). The mod files inside the zip are listed in `Dynasty-Extensions-0.6.4.fbmod.sha256.txt` and `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.
+The zip's checksum is on the release page (`Dynasty-Extensions-0.6.5.sha256.txt`). The mod files inside the zip are listed in `Dynasty-Extensions-0.6.4.fbmod.sha256.txt` and `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.

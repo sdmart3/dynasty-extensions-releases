@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.5
+Changed:
+- Loads sooner after the game starts, so Dynasty Extensions finds room for its hooks next to the game's code. An existing `settle_sec = 30` is now read as 0; set another number to keep a wait.
+Unchanged: the mod file is 0.6.4's `Dynasty-Extensions-0.6.4.fbmod` (you don't import it again); the runtime merge, Instant Replay while you watch a CPU game, Spring Game, the spring game kits, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.6.4, with the same supported setups.
+Files: `DynastyExtensionsPlugin.dll`, its `README.txt` and `dynasty-extensions.ini` (`settle_sec = 0`). The mod files, `wsdata.dll`, `demerge.dll`, `anygame.dll` and `de-expr.pack` are 0.6.4's.
+
 ## 0.6.4
 New:
 - Works on the 2026-11-17 game update, and keeps working on the 2026-10-29 update. On the 2026-11-17 update 0.6.1 turns Weekly Strategy, the spring game, the spring game kits and the runtime merge off; 0.6.4 knows that game build.
