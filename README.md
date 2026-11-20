@@ -4,7 +4,9 @@
 
 Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks (the spring game).
 
-**New in 0.6.5: loads sooner after the game starts.** The plugin now loads Dynasty Extensions about 10 seconds after the game starts instead of about 40, so it finds room for its hooks next to the game's code. Copy the new Plugins folder and keep your ini: an existing `settle_sec = 30` is now read as 0; set another number to keep a wait. The mod file is the same `Dynasty-Extensions-0.6.4.fbmod`: if you have it, you don't import it again (see "What's new in 0.6.5").
+**New in 0.6.6: it works with Playoff Customizer 1.3.1 and Dynasty Customizer 1.1.1.** With either of those, 0.6.5 turned Dynasty Extensions Off. Their calendar has a second 'Season Year End' stretch (for long post-seasons) that the runtime merge did not expect. It now handles every one, and both merge and read ON. Copy the new Plugins folder over the old one and keep your ini. The mod file is the same `Dynasty-Extensions-0.6.4.fbmod`, so you don't import it again (see "What's new in 0.6.6").
+
+**0.6.5: loads sooner after the game starts.** The plugin now loads Dynasty Extensions about 10 seconds after the game starts instead of about 40, so it finds room for its hooks next to the game's code. Copy the new Plugins folder and keep your ini: an existing `settle_sec = 30` is now read as 0; set another number to keep a wait. The mod file is the same `Dynasty-Extensions-0.6.4.fbmod`: if you have it, you don't import it again (see "What came in 0.6.5").
 
 **0.6.4: works on the 2026-11-17 game update.** That update switched off Weekly Strategy, the spring game, the spring game kits and the runtime merge of 0.6.1, and the old mod file no longer fits it. 0.6.4 works on the 2026-11-17 update and keeps working on the 2026-10-29 update. It also brings the spring game kits that work (your second string in your school's white kit, your starters in its dark kit). **Import the new mod file** `Dynasty-Extensions-0.6.4.fbmod` and copy the new Plugins folder (see "What came in 0.6.4").
 
@@ -12,7 +14,7 @@ Three dynasty add-ons in one mod: Press Box, Weekly Strategy and Preseason Weeks
 
 **0.5.1: Instant Replay while you watch a CPU game.** Press Box now offers Instant Replay in the pause menu of a game you watch, the same as in a game you play. With this, the separate Press Box mod is retired.
 
-**No patch files (since 0.5.0).** Before, if you ran Playoff Customizer, Dynasty Customizer or the AIO dynasty mod, you had to find and import a second file made for your exact version. Now one download covers the game alone, DRI+ 3.0, Playoff Customizer 1.3.0, Dynasty Customizer 1.1.0 and the AIO dynasty mod 1.4.1 (the table below lists what was checked). Import the mod, copy the Plugins folder, done.
+**No patch files (since 0.5.0).** Before, if you ran Playoff Customizer, Dynasty Customizer or the AIO dynasty mod, you had to find and import a second file made for your exact version. Now one download covers the game alone, DRI+ 3.0, Playoff Customizer 1.3.0 and 1.3.1, Dynasty Customizer 1.1.0 and 1.1.1 and the AIO dynasty mod 1.4.1 (the table below lists what was checked). Import the mod, copy the Plugins folder, done.
 
 ## Install in 3 steps
 
@@ -28,12 +30,14 @@ Updating from 0.4.0 or older: see INSTALL.md. **Remove any "Dynasty Extensions x
 
 ## Which mods work with it
 
-No patch for any of them. "In game" means it was run in a dynasty and checked. "Off" means Dynasty Extensions turns itself off safely and says so. The checks below were made on the 2026-10-29 game update. On the 2026-11-17 update (checked with the game files Steam installed on 2026-11-18): the game alone, Call Sheet 0.15.2, the AIO dynasty mod 1.5.0 and DRI+ 3.0's November 17 release, in game; the other mods need their own versions for that update from their authors.
+No patch for any of them. "In game" means it was run in a dynasty and checked. "Off" means Dynasty Extensions turns itself off safely and says so. The checks below were made on the 2026-10-29 game update. On the 2026-11-17 update (checked with the game files Steam installed on 2026-11-18): the game alone, Call Sheet 0.15.2, the AIO dynasty mod 1.5.0, DRI+ 3.0's November 17 release, Playoff Customizer 1.3.1 and Dynasty Customizer 1.1.1, in game; the other mods need their own versions for that update from their authors.
 
 | You also use (2026-11-17 update) | Result | Checked |
 |---|---|---|
 | Nothing (the game alone) | works | in game (one Advance) |
 | AIO dynasty mod 1.5.0 | works (in a dynasty you already had) | in game (preseason, one Advance) |
+| Playoff Customizer 1.3.1 | works | in game (one Advance, 2026-11-20) |
+| Dynasty Customizer 1.1.1 | works | in game (one Advance, 2026-11-20) |
 | DRI+ 3.0, November 17 release | works | in game (week 0 into week 1). DRI+'s November 17 release itself does not start on the game files Steam installed on 2026-11-18 until DRI+ is updated for them; that is DRI+'s own check of the game file, not Dynasty Extensions. |
 
 On the 2026-10-29 update:
@@ -205,9 +209,15 @@ Extract the zip first. You import the `.fbmod` in the Mod Manager, not the zip.
 - `INSTALL.md`: the steps, including updating and removing.
 - `CHANGELOG.md`: what changed in each version.
 
-There are no patch files in 0.6.5.
+There are no patch files in 0.6.6.
 
-## What's new in 0.6.5
+## What's new in 0.6.6
+
+- **Playoff Customizer 1.3.1 and Dynasty Customizer 1.1.1 now work.** With either of them in the Mod Manager, 0.6.5 turned Dynasty Extensions Off (the merge file listed refused fragments, code 7). Those versions put a second 'Season Year End' stretch in the calendar, for long post-seasons, and the runtime merge expected one. It now adds its calendar change after every such stretch. A calendar with only one (the game alone, and the versions in the table) is merged exactly as in 0.6.5.
+- **Updating from 0.6.5:** close the Mod Manager and the game and copy the new `Plugins` folder over the old one. Keep your ini. The mod file is the same `Dynasty-Extensions-0.6.4.fbmod`, so you don't import it again. Coming from 0.6.4 or older: see "What came in 0.6.5", "What came in 0.6.4" and INSTALL.md.
+- Everything else is the same as 0.6.5, with the same supported setups. Changed files: `demerge.dll` and the plugin's `README.txt`. The plugin, the ini, the mod files, `wsdata.dll`, `anygame.dll` and `de-expr.pack` are 0.6.5's, byte for byte.
+
+## What came in 0.6.5
 
 - **Loads sooner after the game starts.** The plugin used to wait 30 seconds after the game appeared before it loaded Dynasty Extensions. By then the game has often used up the room next to its own code that Dynasty Extensions needs for its hooks. Now it loads as soon as the game has started (about 10 seconds in), while that room is still free.
 - **Keep your ini.** Every ini from before 0.6.5 has `settle_sec = 30`, the old default. It is now read as 0, and `plugin.log` says so. To keep a wait, set another number, for example `settle_sec = 31`.
@@ -301,4 +311,4 @@ Update to 0.2.3 or later and Advance once; after that it is safe to remove. If a
 
 ## Checksums (sha256)
 
-The zip's checksum is on the release page (`Dynasty-Extensions-0.6.5.sha256.txt`). The mod files inside the zip are listed in `Dynasty-Extensions-0.6.4.fbmod.sha256.txt` and `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.
+The zip's checksum is on the release page (`Dynasty-Extensions-0.6.6.sha256.txt`). The mod files inside the zip are listed in `Dynasty-Extensions-0.6.4.fbmod.sha256.txt` and `For the 2026-10-29 game update\Dynasty-Extensions-0.5.0.sha256.txt` in the zip too.

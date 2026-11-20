@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.6
+Fixed:
+- Works with Playoff Customizer 1.3.1 and Dynasty Customizer 1.1.1. With either of them, 0.6.5 turned Dynasty Extensions Off. Their calendar has a second 'Season Year End' stretch (for long post-seasons) and the runtime merge expected one. It now adds its calendar change after every such stretch; both merge and read ON. A calendar with one stretch is merged exactly as in 0.6.5.
+Unchanged: the mod file is 0.6.4's `Dynasty-Extensions-0.6.4.fbmod` (you don't import it again); loading right after the game starts, Instant Replay while you watch a CPU game, Spring Game, the spring game kits, Spring Practice, Weekly Strategy, practice drills and Press Box work as in 0.6.5, with the same supported setups. Your ini is kept.
+Files: `demerge.dll` and the plugin's `README.txt`. The plugin, the ini, the mod files, `wsdata.dll`, `anygame.dll` and `de-expr.pack` are 0.6.5's.
+
 ## 0.6.5
 Changed:
 - Loads sooner after the game starts, so Dynasty Extensions finds room for its hooks next to the game's code. An existing `settle_sec = 30` is now read as 0; set another number to keep a wait.
